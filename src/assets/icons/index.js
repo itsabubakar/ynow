@@ -16,3 +16,4 @@ export { default as Moneybag } from "./Moneybag";
 export { default as Stall } from "./Stall";
 export { default as SearchBriefCase } from "./SearchBriefCase";
 export { default as Services } from "./Services";
+export { default as Cells } from "./Cells";

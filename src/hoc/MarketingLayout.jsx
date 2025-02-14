@@ -1,4 +1,5 @@
 import { RedLogo } from "@/assets/images/logos";
+import { Link, NavLink } from "react-router";
 
 const MarketingLayout = ({ children }) => {
   return (
@@ -6,38 +7,69 @@ const MarketingLayout = ({ children }) => {
       {/* Navbar */}
       <navbar className="  bg-white border-b border-gray-300 justify-center items-center flex">
         <div className="max-w-[1440px] w-full flex  justify-between items-center  h-20 px-20  py-[18px]">
-          <div className="relative">
+          <NavLink to="/" className="relative">
             <img src={RedLogo} />
-          </div>
+          </NavLink>
 
           <div className="justify-start items-center gap-6 flex">
-            <div className="px-1 py-1.5 border-b border-gray-900 justify-center items-center gap-2.5 flex">
-              <span className="text-center text-gray-900 text-base font-semibold  leading-normal">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `px-1 py-1.5 justify-center items-center h-9 flex border-b ${
+                  isActive ? "border-gray-900" : "border-transparent"
+                }`
+              }
+            >
+              <span className="text-center text-gray-900 text-base font-semibold leading-normal">
                 Home
               </span>
-            </div>
-            <div className="px-1 py-1.5 justify-center items-center gap-2.5 flex">
-              <span className="text-center text-gray-900 text-base font-semibold  leading-normal">
+            </NavLink>
+            <NavLink
+              to="/about-us"
+              className={({ isActive }) =>
+                `px-1 py-1.5 justify-center items-center h-9 flex border-b ${
+                  isActive ? "border-gray-900" : "border-transparent"
+                }`
+              }
+            >
+              <span className="text-center text-gray-900 text-base font-semibold leading-normal">
                 About Us
               </span>
-            </div>
-            <div className="px-1 py-1.5 justify-center items-center gap-2.5 flex">
-              <span className="text-center text-gray-900 text-base font-semibold  leading-normal">
+            </NavLink>
+            <NavLink
+              to="/what-we-do"
+              className={({ isActive }) =>
+                `px-1 py-1.5 justify-center items-center h-9 flex border-b ${
+                  isActive ? "border-gray-900" : "border-transparent"
+                }`
+              }
+            >
+              <span className="text-center text-gray-900 text-base font-semibold leading-normal">
                 What We Do
               </span>
-            </div>
-            <div className="px-1 py-1.5 justify-center items-center gap-2.5 flex">
-              <span className="text-center text-gray-900 text-base font-semibold  leading-normal">
+            </NavLink>
+            <NavLink
+              to="/our-business"
+              className={({ isActive }) =>
+                `px-1 py-1.5 justify-center items-center h-9 flex border-b ${
+                  isActive ? "border-gray-900" : "border-transparent"
+                }`
+              }
+            >
+              <span className="text-center text-gray-900 text-base font-semibold leading-normal">
                 Our Business
               </span>
-            </div>
+            </NavLink>
           </div>
 
-          <div className="px-6 py-2.5 bg-primary-900 rounded-[500px] justify-center items-center gap-2.5 flex">
+          <NavLink
+            to="/contact-us"
+            className="px-6 py-2.5 bg-primary-900 rounded-[500px] justify-center items-center  flex"
+          >
             <span className="text-center text-white text-base font-semibold  leading-normal">
               Contact us
             </span>
-          </div>
+          </NavLink>
         </div>
       </navbar>
 
@@ -49,9 +81,9 @@ const MarketingLayout = ({ children }) => {
       <footer className="flex px-20 py-[120px] bg-white justify-start items-start gap-8 ">
         <div className="w-[1440px] flex mx-auto ">
           <div className="w-[624px] flex-col justify-start items-start gap-6 inline-flex">
-            <div data-svg-wrapper>
+            <Link to="/">
               <img src={RedLogo} />
-            </div>
+            </Link>
             <div className="w-[368px] text-gray-900 text-lg font-normal  leading-7">
               YNow Ltd., a UK-based startup, specializes in the Food & Beverage
               sector.
@@ -66,12 +98,18 @@ const MarketingLayout = ({ children }) => {
                   </div>
                 </div>
                 <div className="self-stretch h-14 flex-col justify-start items-start gap-2 flex">
-                  <div className="self-stretch text-gray-900 text-sm font-normal  leading-normal">
+                  <Link
+                    to={"/about-us"}
+                    className="self-stretch text-gray-900 text-sm font-normal  leading-normal"
+                  >
                     About Us
-                  </div>
-                  <div className="text-gray-900 text-sm font-normal  leading-normal">
+                  </Link>
+                  <Link
+                    to={"/what-we-do"}
+                    className="text-gray-900 text-sm font-normal  leading-normal"
+                  >
                     What we do
-                  </div>
+                  </Link>
                 </div>
               </div>
               <div className="w-[120px] flex-col justify-start items-start gap-4 inline-flex">
@@ -81,9 +119,12 @@ const MarketingLayout = ({ children }) => {
                   </div>
                 </div>
                 <div className="self-stretch h-14 flex-col justify-start items-start gap-2 flex">
-                  <div className="text-gray-900 text-sm font-normal  leading-normal">
+                  <Link
+                    to="/contact-us"
+                    className="text-gray-900 text-sm font-normal  leading-normal"
+                  >
                     Contact Us
-                  </div>
+                  </Link>
                   <div className="text-gray-900 text-sm font-normal  leading-normal">
                     Enquiries
                   </div>
