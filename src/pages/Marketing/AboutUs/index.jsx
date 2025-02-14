@@ -1,13 +1,17 @@
 import MarketingLayout from "@/hoc/MarketingLayout";
 import Hero from "./Hero";
+import MeetTheTeam from "./MeetTheTeam";
+import ValuesAndVision from "./ValuesAndVision";
+import OurCommitment from "./OurCommitment";
 
 const AboutUS = () => {
   return (
     <>
       <MarketingLayout>
-        <section className="flex justify-center px-20 xl:px-0">
-          <Hero />
-        </section>
+        <Hero />
+        <MeetTheTeam />
+        <ValuesAndVision />
+        <OurCommitment />
       </MarketingLayout>
     </>
   );

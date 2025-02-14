@@ -551,14 +551,14 @@ function HomePage() {
           <div className="max-w-[1440px] mx-auto mt-[100px] flex flex-col items-center">
             <div className="w-[890px] h-[260px] flex-col justify-center items-center gap-10 inline-flex">
               <div className="self-stretch h-[164px] flex-col justify-start items-center gap-4 flex">
-                <div className="self-stretch text-center text-[#f2f3f6] text-base font-medium font-['Inter'] uppercase leading-normal tracking-wider">
+                <div className="self-stretch text-center text-[#f2f3f6] text-base font-medium  uppercase leading-normal tracking-wider">
                   get in touch
                 </div>
                 <div className="self-stretch h-[124px] flex-col justify-center items-center gap-5 flex">
-                  <div className="w-[608px] text-center text-white text-4xl font-semibold font-['Inter'] leading-[44px]">
+                  <div className="w-[608px] text-center text-white text-4xl font-semibold  leading-[44px]">
                     Let&apos;s Connect & Grow
                   </div>
-                  <div className="w-[890px] text-center text-[#f2f3f6] text-xl font-normal font-['Inter'] leading-[30px]">
+                  <div className="w-[890px] text-center text-[#f2f3f6] text-xl font-normal  leading-[30px]">
                     We&apos;re here to help! Whether you want to join our team,
                     expand a franchise, invest, or seek expert consulting, our
                     streamlined process makes it easy. Get started today!
@@ -566,7 +566,7 @@ function HomePage() {
                 </div>
               </div>
               <div className="px-7 py-3.5 bg-white rounded-[500px] justify-center items-center gap-2.5 inline-flex">
-                <div className="text-center text-black text-lg font-semibold font-['Inter'] leading-7">
+                <div className="text-center text-black text-lg font-semibold  leading-7">
                   Contact Us
                 </div>
               </div>
@@ -579,14 +579,14 @@ function HomePage() {
                 </div>
                 <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
                   <div className="self-stretch h-[86px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold font-['Inter'] leading-[30px]">
+                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
                       Apply for a Job
                     </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal font-['Inter'] leading-tight">
+                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
                       Looking to join our team? Here’s how you can apply
                     </div>
                   </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold font-['Inter'] underline leading-normal">
+                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
                     Apply Now
                   </div>
                 </div>
@@ -597,15 +597,15 @@ function HomePage() {
                 </div>
                 <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
                   <div className="self-stretch h-[116px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold font-['Inter'] leading-[30px]">
+                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
                       Apply for Franchise Expansion
                     </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal font-['Inter'] leading-tight">
+                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
                       Are you a franchisee ready to expand your business? Let us
                       help you grow
                     </div>
                   </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold font-['Inter'] underline leading-normal">
+                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
                     Apply For Franchise Expansion
                   </div>
                 </div>
@@ -616,15 +616,15 @@ function HomePage() {
                 </div>
                 <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
                   <div className="self-stretch h-[116px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold font-['Inter'] leading-[30px]">
+                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
                       Apply for Investment Opportunities
                     </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal font-['Inter'] leading-tight">
+                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
                       Looking for an investment partner? We’re here to explore
                       the possibilities
                     </div>
                   </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold font-['Inter'] underline leading-normal">
+                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
                     Apply For Investment
                   </div>
                 </div>
@@ -635,15 +635,15 @@ function HomePage() {
                 </div>
                 <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
                   <div className="self-stretch h-[116px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold font-['Inter'] leading-[30px]">
+                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
                       Apply for Management Consulting Services
                     </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal font-['Inter'] leading-tight">
+                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
                       Need expert management for your business? We&apos;ve got
                       you covered
                     </div>
                   </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold font-['Inter'] underline leading-normal">
+                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
                     Apply For Consulting Services
                   </div>
                 </div>
