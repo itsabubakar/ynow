@@ -41,7 +41,7 @@ jobs:
           cd /home/ubuntu/ynow-frontend
           git pull origin main
           /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm install
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm run build
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 restart all
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 list
+          sudo /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm run build
+          sudo /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 restart all
+          sudo /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 list
         EOF
