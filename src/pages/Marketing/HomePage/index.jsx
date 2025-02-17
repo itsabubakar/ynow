@@ -5,28 +5,19 @@ import {
   Development,
   Expansion,
   Management,
-  Moneybag,
   PlayIcon,
   Profit,
   RedDish,
   RedLocation,
   RedStar,
   Revenue,
-  SearchBriefCase,
-  Services,
   Siri,
-  Stall,
   Target,
 } from "@/assets/icons";
-import {
-  BgPattern,
-  Hessa,
-  Hisham,
-  HomepagePlaceholder,
-  YouShushi,
-} from "@/assets/images";
-import { GrayLogo } from "@/assets/images/logos";
+import { HomepagePlaceholder, YouShushi } from "@/assets/images";
 import MarketingLayout from "@/hoc/MarketingLayout";
+import MeetTheTeam from "./MeetTheTeam";
+import GetInTouch from "./GetInTouch";
 
 function HomePage() {
   return (
@@ -187,103 +178,7 @@ function HomePage() {
 
         {/* Meet the team */}
 
-        <div className="bg-[#f2f2f2] w-full flex justify-center">
-          <div className=" h-[806px] max-w-[1280px] px-20 py-[100px] bg-[#f2f2f2] flex-col justify-start items-center gap-[60px] inline-flex">
-            <div className=" h-[220px] flex-col justify-center items-center gap-10 flex">
-              <div className=" h-[124px] flex-col justify-center items-center gap-5 flex">
-                <h2 className="text-center">
-                  <span className="text-gray-900 text-4xl font-semibold primary-900 leading-[44px]">
-                    Meet the{" "}
-                  </span>
-                  <span className="text-primary-900 text-4xl font-semibold primary-900 leading-[44px]">
-                    People
-                  </span>
-                  <span className="text-gray-900 text-4xl font-semibold primary-900 leading-[44px]">
-                    {" "}
-                    Driving Our Success
-                  </span>
-                </h2>
-                <h3 className="w-[890px] text-center text-gray-600 text-xl font-normal primary-900 leading-[30px]">
-                  YNow Ltd.&apos;s management team drives our vision to redefine
-                  the food and beverage industry with unmatched expertise,
-                  innovation, and strategic insight
-                </h3>
-              </div>
-              <div className="justify-start items-center gap-4 inline-flex">
-                <div className="px-7 py-3.5 bg-primary-900 rounded-[500px] justify-center items-center gap-2.5 flex">
-                  <button className="text-center text-white text-lg font-semibold primary-900 leading-7">
-                    Meet Our Leadership Team
-                  </button>
-                </div>
-                <div className="px-7 py-3.5 rounded-[500px] border border-primary-900 justify-center items-center gap-2.5 flex">
-                  <button className="text-center text-primary-900 text-lg font-semibold primary-900 leading-7">
-                    Other Key Team Members
-                  </button>
-                </div>
-                <div className="px-7 py-3.5 rounded-[500px] border border-primary-900 justify-center items-center gap-2.5 flex">
-                  <button className="text-center text-primary-900 text-lg font-semibold primary-900 leading-7">
-                    Our Team at a Glance
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Leads */}
-            <div className="flex gap-10">
-              <div className="bg-white rounded-2xl w-[620px] justify-between h-[326px] flex">
-                <div className="pt-8 pl-8 flex flex-col">
-                  <h3 className="text-gray-900 mb-1 text-lg font-semibold  leading-7">
-                    Hessa AlJoker
-                  </h3>
-                  <p className="text-gray-600 mb-6 text-base font-normal  leading-normal">
-                    Chairman of YNow Ltd
-                  </p>
-                  <p className="w-[276px] text-gray-900 text-base font-normal  leading-normal">
-                    Expert in investment, mega-project management, and finance,
-                    driving strategic growth at YNow Ltd
-                  </p>
-                  <span className="mt-auto pl-1.5 pb-[28.45px]">
-                    <img src={GrayLogo} />
-                  </span>
-                </div>
-
-                <div className=" py-3 pr-3">
-                  <img
-                    className=" rounded-lg w-full h-full"
-                    src={Hessa}
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div className="bg-white rounded-2xl w-[620px] justify-between h-[326px] flex">
-                <div className="pt-8 pl-8 flex flex-col">
-                  <h3 className="text-gray-900 mb-1 text-lg font-semibold  leading-7">
-                    Hisham Naserdine
-                  </h3>
-                  <p className="text-gray-600 mb-6 text-base font-normal  leading-normal">
-                    Managing Director
-                  </p>
-                  <p className="w-[276px] text-gray-900 text-base font-normal  leading-normal">
-                    A seasoned leader in the food and beverage industry, driving
-                    growth, innovation, and market expansion at YNow Ltd
-                  </p>
-                  <span className="mt-auto pl-1.5 pb-[28.45px]">
-                    <img src={GrayLogo} />
-                  </span>
-                </div>
-
-                <div className=" py-3 pr-3 ">
-                  <img
-                    className=" rounded-lg w-full bg-[#8F9896] h-full"
-                    src={Hisham}
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <MeetTheTeam />
 
         {/* What we do */}
 
@@ -543,114 +438,7 @@ function HomePage() {
         </div>
 
         {/* Get in touch */}
-
-        <div
-          className="w-full h-[870px] bg-primary-900 flex-col items-center flex"
-          style={{ backgroundImage: `url(${BgPattern})` }}
-        >
-          <div className="max-w-[1440px] mx-auto mt-[100px] flex flex-col items-center">
-            <div className="w-[890px] h-[260px] flex-col justify-center items-center gap-10 inline-flex">
-              <div className="self-stretch h-[164px] flex-col justify-start items-center gap-4 flex">
-                <div className="self-stretch text-center text-[#f2f3f6] text-base font-medium  uppercase leading-normal tracking-wider">
-                  get in touch
-                </div>
-                <div className="self-stretch h-[124px] flex-col justify-center items-center gap-5 flex">
-                  <div className="w-[608px] text-center text-white text-4xl font-semibold  leading-[44px]">
-                    Let&apos;s Connect & Grow
-                  </div>
-                  <div className="w-[890px] text-center text-[#f2f3f6] text-xl font-normal  leading-[30px]">
-                    We&apos;re here to help! Whether you want to join our team,
-                    expand a franchise, invest, or seek expert consulting, our
-                    streamlined process makes it easy. Get started today!
-                  </div>
-                </div>
-              </div>
-              <div className="px-7 py-3.5 bg-white rounded-[500px] justify-center items-center gap-2.5 inline-flex">
-                <div className="text-center text-black text-lg font-semibold  leading-7">
-                  Contact Us
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-x-4 pt-[60px]">
-              <div className="w-[308px] h-[350px] px-7 py-8 bg-white rounded-2xl border border-[#cfd4dc] flex-col justify-start items-start gap-[50px] inline-flex">
-                <div className="relative">
-                  <SearchBriefCase />
-                </div>
-                <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
-                  <div className="self-stretch h-[86px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
-                      Apply for a Job
-                    </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
-                      Looking to join our team? Here’s how you can apply
-                    </div>
-                  </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
-                    Apply Now
-                  </div>
-                </div>
-              </div>
-              <div className="w-[308px] h-[350px] px-7 py-8 bg-white rounded-2xl border border-[#cfd4dc] flex-col justify-start items-start gap-[50px] inline-flex">
-                <div className="relative">
-                  <Stall />
-                </div>
-                <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
-                  <div className="self-stretch h-[116px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
-                      Apply for Franchise Expansion
-                    </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
-                      Are you a franchisee ready to expand your business? Let us
-                      help you grow
-                    </div>
-                  </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
-                    Apply For Franchise Expansion
-                  </div>
-                </div>
-              </div>
-              <div className="w-[308px] h-[350px] px-7 py-8 bg-white rounded-2xl border border-[#cfd4dc] flex-col justify-start items-start gap-[50px] inline-flex">
-                <div className="relative">
-                  <Moneybag />
-                </div>
-                <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
-                  <div className="self-stretch h-[116px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
-                      Apply for Investment Opportunities
-                    </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
-                      Looking for an investment partner? We’re here to explore
-                      the possibilities
-                    </div>
-                  </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
-                    Apply For Investment
-                  </div>
-                </div>
-              </div>
-              <div className="w-[308px] h-[350px] px-7 py-8 bg-white rounded-2xl border border-[#cfd4dc] flex-col justify-start items-start gap-[50px] inline-flex">
-                <div className="relative">
-                  <Services />
-                </div>
-                <div className="self-stretch grow shrink basis-0 flex-col justify-between items-start flex">
-                  <div className="self-stretch h-[116px] flex-col justify-start items-start gap-4 flex">
-                    <div className="self-stretch text-[#0f1728] text-xl font-semibold  leading-[30px]">
-                      Apply for Management Consulting Services
-                    </div>
-                    <div className="self-stretch text-[#475466] text-sm font-normal  leading-tight">
-                      Need expert management for your business? We&apos;ve got
-                      you covered
-                    </div>
-                  </div>
-                  <div className="self-stretch text-[#c91235] text-sm font-bold  underline leading-normal">
-                    Apply For Consulting Services
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <GetInTouch />
       </div>
     </MarketingLayout>
   );

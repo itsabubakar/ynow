@@ -1,4 +1,11 @@
+import {
+  ChevronDown,
+  Consultancy,
+  MoneyBagSmall,
+  StallSmall,
+} from "@/assets/icons";
 import { RedLogo } from "@/assets/images/logos";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Link, NavLink } from "react-router";
 
 const MarketingLayout = ({ children }) => {
@@ -36,18 +43,72 @@ const MarketingLayout = ({ children }) => {
                 About Us
               </span>
             </NavLink>
-            <NavLink
-              to="/what-we-do"
-              className={({ isActive }) =>
-                `px-1 py-1.5 justify-center items-center h-9 flex border-b ${
-                  isActive ? "border-gray-900" : "border-transparent"
-                }`
-              }
-            >
-              <span className="text-center text-gray-900 text-base font-semibold leading-normal">
-                What We Do
-              </span>
-            </NavLink>
+            <Popover className="relative group ">
+              <PopoverButton className="text-center cursor-pointer flex items-center text-gray-900 text-base font-semibold leading-normal">
+                What We Do{" "}
+                <ChevronDown className=" group-data-[open]:rotate-180" />
+              </PopoverButton>
+              <PopoverPanel
+                anchor="top start"
+                transition
+                className=" [--anchor-gap:12px] [--anchor-offset:-52px] flex gap-2 bg-white border-gray-300 border rounded-xl shadow-[0px_8px_8px_-4px_#10182808,0px_20px_24px_-4px_#10182814] px-5 py-6 origin-top flex-col w-[605px] transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+              >
+                <NavLink
+                  className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                  href="/analytics"
+                >
+                  <div>
+                    <StallSmall />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                      Franchise Development & Expansion
+                    </span>
+                    <span className="text-sm font-normal leading-5 text-gray-600">
+                      We specialize in expanding successful local and UK-based
+                      franchise brands, helping them scale across London and
+                      major cities
+                    </span>
+                  </div>
+                </NavLink>
+                <NavLink
+                  className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                  href="/engagement"
+                >
+                  <div>
+                    <MoneyBagSmall />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                      Business Acquisitions & Investments
+                    </span>
+                    <span className="text-sm font-normal leading-5 text-gray-600">
+                      We acquire and invest in established businesses or master
+                      franchises with strong, sustainable growth potential
+                    </span>
+                  </div>
+                </NavLink>
+                <NavLink
+                  className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                  href="/security"
+                >
+                  <div>
+                    <Consultancy />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                      Management Consulting & Support Services
+                    </span>
+                    <span className="text-sm font-normal leading-5 text-gray-600">
+                      We invest in established businesses and master franchises
+                      with strong, sustainable growth potential, meeting our
+                      high investment standards
+                    </span>
+                  </div>
+                </NavLink>
+              </PopoverPanel>
+            </Popover>
+
             <NavLink
               to="/our-business"
               className={({ isActive }) =>
@@ -57,7 +118,7 @@ const MarketingLayout = ({ children }) => {
               }
             >
               <span className="text-center text-gray-900 text-base font-semibold leading-normal">
-                Our Business
+                Connect & Grow
               </span>
             </NavLink>
           </div>

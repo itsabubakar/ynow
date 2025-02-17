@@ -587,7 +587,7 @@ const MeetTheTeam = () => {
                   className={({ selected }) =>
                     `px-7 py-3.5  rounded-[500px] h-14 justify-center items-center gap-2.5 flex transition-colors duration-400 ${
                       selected
-                        ? "bg-primary-900 outline-0 text-white"
+                        ? "bg-primary-900 text-white"
                         : "border-primary-900 border text-primary-900"
                     }`
                   }

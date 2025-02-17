@@ -23,3 +23,8 @@ export { default as Shield } from "./Shield";
 export { default as Leaf } from "./Leaf";
 export { default as Excellence } from "./Excellence";
 export { default as Partnership } from "./Partnership";
+export { default as Close } from "./Close";
+export { default as Consultancy } from "./Consultancy";
+export { default as StallSmall } from "./StallSmall";
+export { default as MoneyBagSmall } from "./MoneyBagSmall";
+export { default as ChevronDown } from "./ChevronDown";
