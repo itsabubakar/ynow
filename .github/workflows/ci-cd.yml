@@ -40,8 +40,8 @@ jobs:
           nvm use 22.14.0
           cd /home/ubuntu/ynow-frontend
           git pull origin main
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm install
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm run build
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 restart all
-          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 list
+          /home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm install
+          /home/ubuntu/.nvm/versions/node/v22.14.0/bin/npm run build
+          /home/ubuntu/.nvm/versions/node/v22.14.0/bin/pm2 restart all
+          /home/ubuntu/.nvm/versions/node/v22.14.0/bin/pm2 list
         EOF
