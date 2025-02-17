@@ -30,6 +30,7 @@ jobs:
         echo "$PEM_FILE" > ~/.ssh/ec2-key.pem
         chmod 600 ~/.ssh/ec2-key.pem
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2-key.pem ubuntu@ec2-16-171-34-30.eu-north-1.compute.amazonaws.com << EOF
+          sudo su 
           echo "Running as user: $(whoami)"
           eval \$(ssh-agent -s)          
           echo "$PASSPHRASE" | ssh-add ~/.ssh/id_github_ynow
@@ -41,7 +42,7 @@ jobs:
           cd /home/ubuntu/ynow-frontend
           git pull origin main
           /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm install
-          sudo /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm run build
-          sudo /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 restart all
-          sudo /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 list
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm run build
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 restart all
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 list
         EOF
