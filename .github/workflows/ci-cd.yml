@@ -1,0 +1,46 @@
+name: YNOW CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22.14.0
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Deploy to AWS EC2
+      env:
+        PEM_FILE: ${{ secrets.YNOW_PEM }}
+        PASSPHRASE: ${{ secrets.PASSPHRASE }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$PEM_FILE" > ~/.ssh/ec2-key.pem
+        chmod 600 ~/.ssh/ec2-key.pem
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2-key.pem ubuntu@ec2-16-171-34-30.eu-north-1.compute.amazonaws.com << EOF
+          echo "Running as user: $(whoami)"
+          eval \$(ssh-agent -s)          
+          echo "$PASSPHRASE" | ssh-add ~/.ssh/id_rsa
+          # Verify the key is loaded
+          ssh-add -l
+          source ~/.nvm/nvm.sh
+          nvm use 22.14.0
+          cd /home/ubuntu/ynow-frontend
+          git pull origin main
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm install
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/npm run build
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 restart all
+          /home/ubuntu/.nvm/versions/node/v16.20.2/bin/pm2 list
+        EOF
