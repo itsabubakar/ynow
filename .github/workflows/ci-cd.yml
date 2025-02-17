@@ -32,7 +32,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/ec2-key.pem ubuntu@ec2-16-171-34-30.eu-north-1.compute.amazonaws.com << EOF
           echo "Running as user: $(whoami)"
           eval \$(ssh-agent -s)          
-          echo "$PASSPHRASE" | ssh-add ~/.ssh/id_rsa
+          echo "$PASSPHRASE" | ssh-add ~/.ssh/id_github_ynow
           # Verify the key is loaded
           ssh-add -l
           source ~/.nvm/nvm.sh
