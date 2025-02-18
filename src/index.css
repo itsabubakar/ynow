@@ -66,3 +66,12 @@
 body {
   font-family: "Inter";
 }
+
+/* Target only the hero video */
+.hero-video::-webkit-media-controls-play-button {
+  display: none !important;
+}
+
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}

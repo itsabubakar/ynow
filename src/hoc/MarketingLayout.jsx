@@ -1,10 +1,15 @@
 import {
   ChevronDown,
   Consultancy,
+  Email,
   MoneyBagSmall,
+  Phone,
+  RedLogo,
+  RedLogoBig,
   StallSmall,
+  Suitcase,
+  Whatsapp,
 } from "@/assets/icons";
-import { RedLogo } from "@/assets/images/logos";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Link, NavLink } from "react-router";
 
@@ -12,10 +17,10 @@ const MarketingLayout = ({ children }) => {
   return (
     <>
       {/* Navbar */}
-      <navbar className="  bg-white border-b border-gray-300 justify-center items-center flex">
+      <nav className="  bg-white border-b border-gray-300 justify-center items-center flex">
         <div className="max-w-[1440px] w-full flex  justify-between items-center  h-20 px-20  py-[18px]">
           <NavLink to="/" className="relative">
-            <img src={RedLogo} />
+            <RedLogo />
           </NavLink>
 
           <div className="justify-start items-center gap-6 flex">
@@ -44,8 +49,8 @@ const MarketingLayout = ({ children }) => {
               </span>
             </NavLink>
             <Popover className="relative group ">
-              <PopoverButton className="text-center cursor-pointer flex items-center text-gray-900 text-base font-semibold leading-normal">
-                What We Do{" "}
+              <PopoverButton className="text-center outline-0 cursor-pointer flex items-center text-gray-900 text-base font-semibold leading-normal">
+                What We Do
                 <ChevronDown className=" group-data-[open]:rotate-180" />
               </PopoverButton>
               <PopoverPanel
@@ -54,14 +59,14 @@ const MarketingLayout = ({ children }) => {
                 className=" [--anchor-gap:12px] [--anchor-offset:-52px] flex gap-2 bg-white border-gray-300 border rounded-xl shadow-[0px_8px_8px_-4px_#10182808,0px_20px_24px_-4px_#10182814] px-5 py-6 origin-top flex-col w-[605px] transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
               >
                 <NavLink
-                  className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
-                  href="/analytics"
+                  className="flex gap-4 p-3 hover:bg-gray-100 hover:rounded-lg"
+                  to="/what-we-do/franchise-development-expansion"
                 >
                   <div>
                     <StallSmall />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                    <span className="text-gray-900 text-base font-semibold leading-[24px]">
                       Franchise Development & Expansion
                     </span>
                     <span className="text-sm font-normal leading-5 text-gray-600">
@@ -73,7 +78,7 @@ const MarketingLayout = ({ children }) => {
                 </NavLink>
                 <NavLink
                   className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
-                  href="/engagement"
+                  to="/what-we-do/business-acquisition-investment"
                 >
                   <div>
                     <MoneyBagSmall />
@@ -90,7 +95,7 @@ const MarketingLayout = ({ children }) => {
                 </NavLink>
                 <NavLink
                   className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
-                  href="/security"
+                  to="/what-we-do/management-consulting-services"
                 >
                   <div>
                     <Consultancy />
@@ -109,18 +114,154 @@ const MarketingLayout = ({ children }) => {
               </PopoverPanel>
             </Popover>
 
-            <NavLink
-              to="/our-business"
-              className={({ isActive }) =>
-                `px-1 py-1.5 justify-center items-center h-9 flex border-b ${
-                  isActive ? "border-gray-900" : "border-transparent"
-                }`
-              }
-            >
-              <span className="text-center text-gray-900 text-base font-semibold leading-normal">
+            <Popover className="relative group">
+              <PopoverButton className="text-center outline-0 cursor-pointer flex items-center text-gray-900 text-base font-semibold leading-normal">
                 Connect & Grow
-              </span>
-            </NavLink>
+                <ChevronDown className=" group-data-[open]:rotate-180" />
+              </PopoverButton>
+              <PopoverPanel
+                anchor="top start"
+                transition
+                className=" [--anchor-gap:12px] gap-5 [--anchor-offset:-52px] flex  bg-white border-gray-300 border rounded-xl shadow-[0px_8px_8px_-4px_#10182808,0px_20px_24px_-4px_#10182814] px-5 py-6 origin-top flex-col w-[605px] transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+              >
+                {/* Socials */}
+                <div className="space-y-1">
+                  <a
+                    href="mailto:contact@ynow.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-4 items-center p-3 rounded-lg hover:bg-gray-100"
+                  >
+                    <span>
+                      <Email />
+                    </span>
+                    <div>
+                      <p className="font-semibold text-base text-gray-900 mb-1">
+                        Email
+                      </p>
+                      <p className="font-normal text-sm text-gray-600 leading-[20px]">
+                        contact@ynow.com
+                      </p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="tel:+97145578860"
+                    className="flex gap-4 items-center p-3 rounded-lg hover:bg-gray-100"
+                  >
+                    <span>
+                      <Phone />
+                    </span>
+                    <div>
+                      <p className="font-semibold text-base text-gray-900 mb-1">
+                        Phone
+                      </p>
+                      <p className="font-normal text-sm text-gray-600 leading-[20px]">
+                        +971 4 557 8860
+                      </p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://wa.me/97145578860"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex gap-4 items-center p-3 rounded-lg hover:bg-gray-100"
+                  >
+                    <span>
+                      <Whatsapp />
+                    </span>
+                    <div>
+                      <p className="font-semibold text-base text-gray-900 mb-1">
+                        WhatsApp
+                      </p>
+                      <p className="font-normal text-sm text-gray-600 leading-[20px]">
+                        +971 4 557 8860
+                      </p>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Links */}
+
+                <div>
+                  <div className="w-full h-5 justify-center items-center gap-[13px] inline-flex mb-3">
+                    <div className="text-[#667084] text-sm font-medium font-['Inter'] uppercase leading-tight tracking-wide">
+                      You might looking for
+                    </div>
+                    <div className="w-[362px] h-[0px] border border-[#cfd4dc]"></div>
+                  </div>
+                  <NavLink
+                    className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                    href="/analytics"
+                  >
+                    <div>
+                      <Suitcase />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                        Apply for a Job
+                      </span>
+                      <span className="text-sm font-normal leading-5 text-gray-600">
+                        Let&apos;s see how it works and how you can apply
+                      </span>
+                    </div>
+                  </NavLink>
+
+                  <NavLink
+                    className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                    href="/analytics"
+                  >
+                    <div>
+                      <StallSmall />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                        Apply for Franchise Expansion
+                      </span>
+                      <span className="text-sm font-normal leading-5 text-gray-600">
+                        Are you a franchisee ready to expand your business? Let
+                        us help you grow
+                      </span>
+                    </div>
+                  </NavLink>
+                  <NavLink
+                    className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                    href="/engagement"
+                  >
+                    <div>
+                      <MoneyBagSmall />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                        Apply for Investment Opportunities
+                      </span>
+                      <span className="text-sm font-normal leading-5 text-gray-600">
+                        Looking for an investment partner? We&apos;re here to
+                        explore the possibilities
+                      </span>
+                    </div>
+                  </NavLink>
+                  <NavLink
+                    className="flex gap-4  p-3 hover:bg-gray-100 hover:rounded-lg"
+                    href="/security"
+                  >
+                    <div>
+                      <Consultancy />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className="text-gray-900  text-base font-semibold leading-[24px]">
+                        Apply for Management Consulting Services
+                      </span>
+                      <span className="text-sm font-normal leading-5 text-gray-600">
+                        Need expert management for your business? We&apos;ve got
+                        you covered
+                      </span>
+                    </div>
+                  </NavLink>
+                </div>
+              </PopoverPanel>
+            </Popover>
           </div>
 
           <NavLink
@@ -132,7 +273,7 @@ const MarketingLayout = ({ children }) => {
             </span>
           </NavLink>
         </div>
-      </navbar>
+      </nav>
 
       {/* Body */}
 
@@ -143,7 +284,7 @@ const MarketingLayout = ({ children }) => {
         <div className="w-[1440px] flex mx-auto ">
           <div className="w-[624px] flex-col justify-start items-start gap-6 inline-flex">
             <Link to="/">
-              <img src={RedLogo} />
+              <RedLogoBig />
             </Link>
             <div className="w-[368px] text-gray-900 text-lg font-normal  leading-7">
               YNow Ltd., a UK-based startup, specializes in the Food & Beverage
