@@ -165,9 +165,9 @@ const MeetTheTeam = () => {
             </div>
           </DialogPanel>
         </Dialog>
-        <div className="flex gap-10">
-          <div className="bg-white rounded-2xl w-[620px] justify-between h-[326px] flex">
-            <div className="pt-8 pl-8 flex flex-col">
+        <div className="flex flex-col lg:flex-row gap-10">
+          <div className="bg-white rounded-2xl lg:w-[620px] justify-between lg:h-[326px] flex flex-col ">
+            <div className="pt-8 pl-8 flex flex-col ">
               <h3 className="text-gray-900 mb-1 text-lg font-semibold  leading-7">
                 Hessa AlJoker
               </h3>
@@ -195,7 +195,7 @@ const MeetTheTeam = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl w-[620px] justify-between h-[326px] flex">
+          <div className="bg-white rounded-2xl lg:w-[620px] justify-between lg:h-[326px] flex flex-col">
             <div className="pt-8 pl-8 flex flex-col">
               <h3 className="text-gray-900 mb-1 text-lg font-semibold  leading-7">
                 Hicham N. Karout
@@ -547,20 +547,13 @@ const MeetTheTeam = () => {
     <>
       <div className="bg-[#f2f2f2] w-full flex justify-center">
         <div className="  max-w-[1280px] px-20 py-[100px] bg-[#f2f2f2] flex-col justify-start items-center inline-flex">
-          <div className="mb-10 h-[124px] flex-col justify-center items-center gap-5 flex">
-            <h2 className="text-center">
-              <span className="text-gray-900 text-4xl font-semibold primary-900 leading-[44px]">
-                Meet the{" "}
-              </span>
-              <span className="text-primary-900 text-4xl font-semibold primary-900 leading-[44px]">
-                People
-              </span>
-              <span className="text-gray-900 text-4xl font-semibold primary-900 leading-[44px]">
-                {" "}
-                Driving Our Success
-              </span>
+          <div className="mb-10 lg:h-[124px] flex-col justify-center items-center gap-5 flex">
+            <h2 className="text-center text-3xl leading-[38px] lg:leading-[44px] lg:text-4xl font-semibold ">
+              <span className="text-gray-900  ">Meet the </span>
+              <span className="text-primary-900  ">People</span>
+              <span className="text-gray-900  "> Driving Our Success</span>
             </h2>
-            <h3 className="w-[890px] text-center text-gray-600 text-xl font-normal primary-900 leading-[30px]">
+            <h3 className="max-w-[890px] text-center text-gray-600 text-xl font-normal leading-[30px]">
               YNow Ltd.&apos;s management team drives our vision to redefine the
               food and beverage industry with unmatched expertise, innovation,
               and strategic insight
@@ -572,7 +565,7 @@ const MeetTheTeam = () => {
             onChange={setSelectedIndex}
             className="flex flex-col items-center gap-[60px]"
           >
-            <TabList className="justify-start items-center gap-4 inline-flex">
+            <TabList className="bg-green-500 overflow-x-scroll justify-start items-center gap-4 inline-flex">
               {[
                 "Meet Our Leadership Team",
                 "Other Key Team Members",

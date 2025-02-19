@@ -6,7 +6,6 @@ import {
   Development,
   Expansion,
   Management,
-  PauseIcon,
   Profit,
   RedDish,
   RedLocation,
@@ -24,9 +23,6 @@ import { useEffect, useRef, useState } from "react";
 
 function HomePage() {
   const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isButtonVisible, setIsButtonVisible] = useState(true);
-  let hideTimeout = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -52,127 +48,49 @@ function HomePage() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const togglePlayPause = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-      hideButtonWithDelay();
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-      setIsButtonVisible(true); // Keep visible when paused
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.play().catch((err) => console.error("Autoplay failed:", err));
     }
-  };
-
-  const hideButtonWithDelay = () => {
-    if (isPlaying) {
-      clearTimeout(hideTimeout.current);
-      hideTimeout.current = setTimeout(() => {
-        setIsButtonVisible(false);
-      }, 500); // Hide after 0.5s
-    }
-  };
-
-  const handleMouseMove = () => {
-    setIsButtonVisible(true);
-    if (isPlaying) {
-      clearTimeout(hideTimeout.current);
-      hideTimeout.current = setTimeout(() => {
-        setIsButtonVisible(false);
-      }, 2000); // Hide after 2s of inactivity (only when playing)
-    }
-  };
+  }, []);
 
   return (
     <MarketingLayout>
-      <div className="mt-20 flex flex-col items-center">
+      <div className="lg:mt-20 mt-14 flex flex-col items-center">
         {/* Header */}
-        <p className="text-center mb-4 text-gray-600 text-base font-medium  uppercase leading-[24px] tracking-wider">
+        <p className="text-center px-4 mb-4 text-gray-600 lg:text-xs leading-[20px] text-base font-medium  uppercase lg:leading-[24px] tracking-wider">
           Who We Are
         </p>
         {/* Subheader */}
-        <h1 className="text-center max-w-[954px] mb-6">
-          <span className="text-gray-900 text-6xl font-semibold  leading-[72px]">
+        <h1 className="text-center px-4 max-w-[954px] lg:mb-6 mb-3">
+          <span className="text-gray-900 text-4xl leading-[44px] lg:text-6xl font-semibold  lg:leading-[72px]">
             Growing Together in the{" "}
           </span>
-          <span className="text-primary-900 text-6xl font-bold  leading-[72px]">
+          <span className="text-primary-900 text-4xl leading-[44px] lg:text-6xl font-bold  lg:leading-[72px]">
             Food & Beverage{" "}
           </span>
-          <span className="text-gray-900 text-6xl font-semibold  leading-[72px]">
+          <span className="text-gray-900 leading-[44px] text-4xl lg:text-6xl font-semibold  lg:leading-[72px]">
             Industry
           </span>
         </h1>
-        <h2 className="w-[906px] pb-[60px] text-center text-gray-600 text-xl font-normal  leading-[30px]">
+        <h2 className="max-w-[906px] px-4 pb-8 lg:pb-[60px] text-center text-gray-600 lg:text-xl font-normal  lg:leading-[30px] text-sm leading-[20px]">
           YNow Ltd., a UK-based startup, specializes in the Food & Beverage
           sector. As part of Contra Investment Group, a family-owned business
           with 50+ years of success across the Middle East, Europe, and beyond,
           we drive innovation and growth
         </h2>
 
-        {/* Video Player */}
-        <div className="relative" onMouseMove={handleMouseMove}>
-          {/* Play/Pause Button */}
-          <div
-            className={`absolute h-[114px] flex justify-center items-center  rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary-900 outline-none transition-opacity duration-300 ${
-              isButtonVisible || !isPlaying
-                ? "opacity-100"
-                : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <button
-              onClick={togglePlayPause}
-              className={` focus:outline-none outline-none  h-fit `}
-            >
-              {isPlaying ? (
-                <div className="relative flex justify-center items-center">
-                  <svg
-                    width="114"
-                    height="114"
-                    viewBox="0 0 114 114"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="114" height="114" rx="57" fill="#C91235" />
-                  </svg>
-                  <span className="absolute  top-[32%]  left-[33%]">
-                    <PauseIcon />
-                  </span>
-                </div>
-              ) : (
-                <div className="w-[114px] h-[114px] relative rounded-[110px]  overflow-hidden">
-                  <div className="w-[114px] h-[114px] left-0 top-0 absolute bg-[#c91235] rounded-[500px]" />
-                  <div
-                    data-svg-wrapper
-                    className="left-[40px] top-[37px] absolute"
-                  >
-                    <svg
-                      width="40"
-                      height="40"
-                      viewBox="0 0 40 40"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7.70461 5.58555C8.09001 5.3619 8.56533 5.3603 8.9522 5.58139L32.2855 18.9147C32.675 19.1374 32.9154 19.5515 32.9154 20C32.9154 20.4485 32.675 20.8629 32.2855 21.0854L8.9522 34.4187C8.56533 34.6397 8.09001 34.6382 7.70461 34.4145C7.31923 34.1909 7.08203 33.779 7.08203 33.3334V6.66669C7.08203 6.2211 7.31923 5.8092 7.70461 5.58555Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              )}
-            </button>
-          </div>
-
+        <div className="relative">
           {/* Video Element */}
           <video
             ref={videoRef}
             className="w-full max-h-[1080px] h-auto"
             muted
+            playsInline
+            loop
+            autoPlay
             preload="metadata"
-            onEnded={() => {
-              setIsPlaying(false);
-              setIsButtonVisible(true); // Show button when video ends
-            }}
           >
             <source src={HeroVideo} type="video/mp4" />
           </video>
@@ -180,9 +98,9 @@ function HomePage() {
 
         {/* Stats */}
         <div className="w-full flex justify-center border-b border-gray-300">
-          <div className="max-w-[1440px] h-[232px] px-20 pt-20 pb-[60px]  justify-center items-center gap-10 inline-flex">
+          <div className="max-w-[1440px] px-4 lg:px-20 pt-16 lg:pt-20 pb-14 lg:pb-[60px]  justify-center items-center gap-8 lg:gap-10 lg:flex-row flex flex-col flex-wrap">
             <div className="w-[260px] flex-col justify-center items-center gap-2 inline-flex">
-              <h3 className="text-center text-gray-900 text-3xl font-semibold  leading-[38px]">
+              <h3 className="text-center text-gray-900 text-2xl leading-[32px] lg:text-3xl font-semibold  lg:leading-[38px]">
                 £80K - £250K
               </h3>
               <div className="self-stretch h-[46px] flex-col justify-start items-start flex">
@@ -195,7 +113,7 @@ function HomePage() {
               </div>
             </div>
             <div className="w-[260px] flex-col justify-center items-center gap-2 inline-flex">
-              <h3 className="self-stretch text-center text-gray-900 text-3xl font-semibold  leading-[38px]">
+              <h3 className="self-stretch text-center text-gray-900 text-2xl leading-[32px] lg:text-3xl font-semibold  lg:leading-[38px]">
                 17% or higher
               </h3>
               <div className="self-stretch h-[46px] flex-col justify-start items-start flex">
@@ -208,7 +126,7 @@ function HomePage() {
               </div>
             </div>
             <div className="w-[260px] flex-col justify-center items-center gap-2 inline-flex">
-              <h3 className="self-stretch text-center text-gray-900 text-3xl font-semibold  leading-[38px]">
+              <h3 className="self-stretch text-center text-gray-900 text-2xl leading-[32px] lg:text-3xl font-semibold  lg:leading-[38px]">
                 £2.5 million
               </h3>
               <div className="self-stretch h-[46px] flex-col justify-start items-start flex">
@@ -221,7 +139,7 @@ function HomePage() {
               </div>
             </div>
             <div className="w-[260px] flex-col justify-center items-center gap-2 inline-flex">
-              <h3 className="self-stretch text-center text-gray-900 text-3xl font-semibold  leading-[38px]">
+              <h3 className="self-stretch text-center text-gray-900 text-2xl leading-[32px] lg:text-3xl font-semibold  lg:leading-[38px]">
                 £1 to £7 million
               </h3>
               <div className="self-stretch h-[46px] flex-col justify-start items-start flex">
@@ -237,63 +155,56 @@ function HomePage() {
         </div>
 
         {/* About */}
-        <div className="max-w-[1440px] h-[792px] p-20 flex-col justify-start items-center gap-[60px] inline-flex">
+        <div className="max-w-[1440px] lg:h-[792px] lg:p-20 pt-10 pb-16 px-4 flex-col justify-start items-center gap-[60px] inline-flex">
           <div className="flex-col justify-center items-center gap-5 flex">
-            <h3>
-              <span className="text-gray-900 text-4xl font-semibold  leading-[44px]">
-                About{" "}
-              </span>
-              <span className="text-primary-900 text-4xl font-semibold  leading-[44px]">
-                YNow Ltd.
-              </span>
-              <span className="text-gray-900 text-4xl font-semibold  leading-[44px]">
-                {" "}
-                – Our Journey & Vision
-              </span>
+            <h3 className="lg:leading-[44px] leading-[38px] lg:text-4xl font-semibold text-3xl  text-center">
+              <span className="text-gray-900 ">About </span>
+              <span className="text-primary-900 ">YNow Ltd.</span>
+              <span className="text-gray-900 "> – Our Journey & Vision</span>
             </h3>
-            <p className="w-[890px] text-center text-gray-600 text-xl font-normal  leading-[30px]">
+            <p className="max-w-[890px] text-center text-gray-600 text-sm leading-[20px] lg:text-xl font-normal  lg:leading-[30px]">
               YNow Ltd. is a UK-based Food & Beverage startup under Contra
               Investment Group, a family-owned business with 50+ years of
               success across the Middle East, Europe, and beyond.
             </p>
           </div>
-          <div className="justify-start items-center gap-10 inline-flex">
-            <div className="w-[488px] p-[60px] rounded-3xl border border-gray-300 flex-col justify-center items-center gap-10 inline-flex">
+          <div className="justify-start items-center gap-10 flex flex-col lg:flex-row">
+            <div className="max-w-[488px] min-w-[343px] px-6 py-7 lg:p-[60px] rounded-3xl border border-gray-300 flex-col justify-center items-center lg:gap-10 gap-y-5 flex">
               <div className="relative">
                 <Siri />
               </div>
               <div className="self-stretch h-[168px] flex-col justify-center items-start gap-4 flex">
-                <h3 className="self-stretch text-center text-gray-900 text-2xl font-semibold  leading-loose">
+                <h3 className="self-stretch text-center text-gray-900 lg:text-2xl font-semibold leading-[28px]  lg:leading-loose text-lg">
                   Welcome to YNow Ltd.
                 </h3>
-                <p className="self-stretch text-center text-gray-600 text-base font-normal  leading-normal">
+                <p className="self-stretch text-center text-gray-600 text-sm lg:leading-[20px] lg:text-base font-normal  leading-normal ">
                   At YNow Ltd., we are a UK-based startup specializing in the
                   Food and Beverage industry. We proudly operate as part of the
                   Contra Investment Group, a distinguished family-owned
                   business...
                 </p>
               </div>
-              <div className="text-center text-primary-900 text-base font-semibold  underline leading-normal">
+              <div className="text-center text-primary-900 text-base font-semibold  underline lg:leading-normal leading-[24px]">
                 Learn more about us
               </div>
             </div>
 
-            <div className="w-[488px] p-[60px] rounded-3xl border border-gray-300 flex-col justify-center items-center gap-10 inline-flex">
+            <div className="max-w-[488px] min-w-[343px] px-6 py-7 lg:p-[60px] rounded-3xl border border-gray-300 flex-col justify-center items-center lg:gap-10 gap-y-5 flex">
               <div className="relative">
                 <Target />
               </div>
               <div className="self-stretch h-[168px] flex-col justify-center items-start gap-4 flex">
-                <h3 className="self-stretch text-center text-gray-900 text-2xl font-semibold  leading-loose">
+                <h3 className="self-stretch text-center text-gray-900 lg:text-2xl font-semibold leading-[28px]  lg:leading-loose text-lg">
                   Our Mission & Values
                 </h3>
-                <p className="self-stretch text-center text-gray-600 text-base font-normal  leading-normal">
+                <p className="self-stretch text-center text-gray-600 text-sm lg:leading-[20px] lg:text-base font-normal  leading-normal ">
                   At YNow Ltd., we are dedicated to redefining the food and
                   beverage industry by delivering high-quality, sustainable, and
                   innovative products. Guided by Contra Investment Group&apos;s
                   founding principles of growth, innovation...
                 </p>
               </div>
-              <div className="text-center text-primary-900 text-base font-semibold  underline leading-normal">
+              <div className="text-center text-primary-900 text-base font-semibold  underline lg:leading-normal leading-[24px]">
                 Learn more
               </div>
             </div>
@@ -566,7 +477,7 @@ function HomePage() {
       </div>
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-6 bg-primary-900 p-4 rounded-full transition-opacity duration-300 ${
+        className={`fixed bottom-6 cursor-pointer right-6 bg-primary-900 p-4 rounded-full transition-opacity duration-300 ${
           isVisible ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >

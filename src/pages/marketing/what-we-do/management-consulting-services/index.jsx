@@ -1,9 +1,14 @@
 import MarketingLayout from "@/hoc/MarketingLayout";
+import Header from "./Header";
+import HowItWorks from "./HowItWorks";
+import Application from "./Application";
 
 const ManagementConsultancyService = () => {
   return (
     <MarketingLayout>
-      import React from import React from import React from import React from
+      <Header />
+      <HowItWorks />
+      <Application />
     </MarketingLayout>
   );
 };

@@ -1,19 +1,14 @@
 import MarketingLayout from "@/hoc/MarketingLayout";
+import Header from "./Header";
+import HowItWorks from "./HowItWorks";
+import Application from "./Application";
 
 const BusinessAcquisition = () => {
   return (
     <MarketingLayout>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-      aspernatur deleniti quaerat odio fuga autem consectetur at adipisci
-      recusandae exercitationem omnis ex, distinctio temporibus pariatur fugiat.
-      Rerum architecto commodi atque! Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Reiciendis aspernatur deleniti quaerat odio fuga autem
-      consectetur at adipisci recusandae exercitationem omnis ex, distinctio
-      temporibus pariatur fugiat. Rerum architecto commodi atque! Lorem ipsum
-      dolor sit amet consectetur adipisicing elit. Reiciendis aspernatur
-      deleniti quaerat odio fuga autem consectetur at adipisci recusandae
-      exercitationem omnis ex, distinctio temporibus pariatur fugiat. Rerum
-      architecto commodi atque!
+      <Header />
+      <HowItWorks />
+      <Application />
     </MarketingLayout>
   );
 };
