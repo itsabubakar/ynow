@@ -1,4 +1,4 @@
-name: YNOW CI/CD
+name: YNOW CI/CD 
 
 on:
   push:
