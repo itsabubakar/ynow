@@ -61,6 +61,9 @@
   --color-success-800: #085d3a;
   --color-success-900: #074d31;
   --color-success-950: #053321;
+
+  /* Others */
+  --color-light-gray: #f2f2f2;
 }
 
 body {
