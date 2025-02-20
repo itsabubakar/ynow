@@ -1,6 +1,14 @@
-import { Close, GrayLogoIcon } from "@/assets/icons";
+import { Close, GrayLogoIcon, SmallLargeGrayIcon } from "@/assets/icons";
 import LargeGrayLogo from "@/assets/icons/LargeGrayLogo";
-import { Hessa, HessaFull, Hisham, HishamFull } from "@/assets/images";
+import {
+  Hessa,
+  HessaFull,
+  HessaSmall,
+  Hisham,
+  HishamFull,
+  HishamMedium,
+  HishamSmall,
+} from "@/assets/images";
 import {
   Dialog,
   DialogPanel,
@@ -26,29 +34,29 @@ const MeetTheTeam = () => {
           open={isFirstModalOpen}
           onClose={() => setFirstModalOpen(false)}
           transition
-          className="fixed inset-0 flex w-screen items-center justify-center bg-black/60  transition duration-300 ease-out data-[closed]:opacity-0"
+          className="fixed inset-0 flex w-screen items-center justify-center bg-black/60 transition duration-300 ease-out data-[closed]:opacity-0"
         >
-          <DialogPanel className="w-[1042px] h-[720px] space-y-4 bg-white rounded-xl">
-            <DialogTitle className="bg-[#FFF3F6] h-[178px] pr-[58px] flex items-center justify-between rounded-t-xl relative">
+          <DialogPanel className="space-y-4 rounded-xl bg-white lg:h-[720px] lg:w-[1042px]">
+            <DialogTitle className="relative flex h-[178px] items-center justify-between rounded-t-xl bg-[#FFF3F6] pr-[58px]">
               <div className="pl-[60px]">
-                <h2 className="text-gray-900 font-semibold text-4xl leading-[44px] mb-1">
+                <h2 className="mb-1 text-4xl leading-[44px] font-semibold text-gray-900">
                   Hessa AlJoker
                 </h2>
-                <h3 className="text-gray-600 font-medium text-xl leading-[30px]">
+                <h3 className="text-xl leading-[30px] font-medium text-gray-600">
                   Chairwoman of YNow Ltd
                 </h3>
               </div>
               <LargeGrayLogo />
               <button
                 onClick={() => setFirstModalOpen(false)}
-                className="absolute z-10 top-0 right-0 pt-[17px] pr-[18px] cursor-pointer"
+                className="absolute top-0 right-0 z-10 cursor-pointer pt-[17px] pr-[18px]"
               >
                 <Close />
               </button>
             </DialogTitle>
-            <div className="flex relative">
-              <div className="pt-[32px] pl-[60px] max-w-[535px] flex flex-col gap-[28px]">
-                <p className="text-gray-900 text-base ">
+            <div className="relative flex">
+              <div className="flex max-w-[535px] flex-col gap-[28px] pt-[32px] pl-[60px]">
+                <p className="text-base text-gray-900">
                   Hessa AlJoker serves as Chairman of YNow Ltd. and is a board
                   member of Contra Investment Group. With extensive experience
                   in investment, managing mega-complex projects, and finance,
@@ -56,7 +64,7 @@ const MeetTheTeam = () => {
                   company&apos;s success.
                 </p>
                 <div className="">
-                  <h3 className="font-semibold text-base leading-[24px] text-gray-900">
+                  <h3 className="text-base leading-[24px] font-semibold text-gray-900">
                     Hessa&apos;s leadership is marked by:
                   </h3>
 
@@ -75,14 +83,14 @@ const MeetTheTeam = () => {
                     </li>
                   </ul>
                 </div>
-                <p className="text-base font-normal leading-[24px] ">
+                <p className="text-base leading-[24px] font-normal">
                   Her vision, combined with her deep understanding of global
                   markets, positions YNow Ltd. for sustained growth and
                   long-term impact.
                 </p>
               </div>
-              <div className="absolute -top-[173px] right-0 pr-4 ">
-                <img className="w-[379px] h-[700px]" src={HessaFull} />
+              <div className="absolute -top-[173px] right-0 pr-4">
+                <img className="h-[700px] w-[379px]" src={HessaFull} />
               </div>
             </div>
           </DialogPanel>
@@ -91,38 +99,51 @@ const MeetTheTeam = () => {
           open={isSecondModalOpen}
           onClose={() => setSecondModalOpen(false)}
           transition
-          className="fixed inset-0 flex w-screen items-center justify-center bg-black/60  transition duration-300 ease-out data-[closed]:opacity-0"
+          className="fixed inset-0 flex w-screen items-center justify-center bg-black/60 p-4 transition duration-300 ease-out data-[closed]:opacity-0"
         >
-          <DialogPanel className="w-[1042px] h-[738px] space-y-4 bg-white rounded-xl">
-            <DialogTitle className="bg-[#FFF3F6] h-[178px] flex items-center justify-between rounded-t-xl pr-[58px] relative">
-              <div className="pl-[60px]">
-                <h2 className="text-gray-900 font-semibold text-4xl leading-[44px] mb-1">
+          <DialogPanel className="h-[60vh] space-y-4 overflow-y-auto rounded-xl bg-white pb-10 lg:h-[738px] lg:w-[1042px] lg:overflow-hidden">
+            <DialogTitle className="relative flex items-center justify-between rounded-t-xl bg-[#FFF3F6] py-[17px] lg:h-[178px] lg:pr-[58px]">
+              <div className="hidden pl-[60px] lg:block">
+                <h2 className="mb-1 text-4xl leading-[44px] font-semibold text-gray-900">
                   Hicham N. Karout
                 </h2>
-                <h3 className="text-gray-600 font-medium text-xl leading-[30px]">
+                <h3 className="text-xl leading-[30px] font-medium text-gray-600">
                   Managing Director of YNow Ltd
                 </h3>
               </div>
-              <LargeGrayLogo />
+              <span className="hidden lg:block">
+                <LargeGrayLogo />
+              </span>
+
+              <span className="flex w-full justify-center lg:hidden">
+                <SmallLargeGrayIcon />
+              </span>
               <button
                 onClick={() => setSecondModalOpen(false)}
-                className="absolute z-10 top-0 right-0 pt-[17px] pr-[18px] cursor-pointer"
+                className="absolute top-0 right-0 z-10 cursor-pointer pt-3 pr-3 lg:pt-[17px] lg:pr-[18px]"
               >
                 <Close />
               </button>
             </DialogTitle>
-            <div className="flex relative">
-              <div className="pt-[32px] pl-[60px] flex flex-col gap-[28px]">
-                <div className=" w-[535px]">
-                  <p className="text-gray-900 text-base mb-2">
-                    Hisham Naserdine brings over 20 years of extensive
+            <div className="relative -mt-24 flex flex-col items-center lg:-mt-0 lg:flex-row">
+              {/* Mobile image */}
+              <div className="z-20 lg:hidden">
+                <img
+                  className="relative z-30 max-w-[285px] object-contain"
+                  src={HishamMedium}
+                />
+              </div>
+              <div className="flex flex-col gap-[28px] px-4 pt-[33px] lg:pl-[60px]">
+                <div className="w-full lg:max-w-[535px]">
+                  <p className="mb-2 text-sm leading-[20px] text-gray-900 lg:text-base lg:leading-[24px]">
+                    Hicham N. Karout brings over 20 years of extensive
                     experience in the Food and Beverage industry across Europe
                     and the Middle East. As Managing Director of YNow Ltd.,
                     Hisham combines deep industry knowledge with exceptional
                     leadership skills to drive the company&apos;s growth and
                     operational excellence.
                   </p>
-                  <p className="text-gray-900 text-base ">
+                  <p className="text-sm leading-[20px] text-gray-900 lg:text-base lg:leading-[24px]">
                     Hisham has a proven track record of turning challenges into
                     opportunities, spearheading business expansion, and
                     fostering innovative strategies that align with market
@@ -130,12 +151,12 @@ const MeetTheTeam = () => {
                   </p>
                 </div>
 
-                <div className=" w-[535px] ">
-                  <h3 className="font-semibold text-base leading-[24px] text-gray-900">
+                <div className="w-full lg:max-w-[535px]">
+                  <h3 className="text-sm leading-[20px] font-semibold text-gray-900 lg:text-base lg:leading-[24px]">
                     His expertise includes:
                   </h3>
 
-                  <ul className="mt-2 list-disc pl-5">
+                  <ul className="mt-2 list-disc pl-5 text-sm text-gray-900 lg:text-base">
                     <li>
                       Developing and scaling franchise operations across diverse
                       markets.
@@ -150,78 +171,92 @@ const MeetTheTeam = () => {
                     </li>
                   </ul>
                 </div>
-                <p className="text-base w-[535px] font-normal leading-[24px] pb-10">
+                <p className="w-full text-sm leading-[20px] font-normal lg:max-w-[535px] lg:pb-10 lg:text-base lg:leading-[24px]">
                   With his vision and expertise, Hisham is instrumental in
                   ensuring YNow Ltd. establishes a strong foothold in the UK,
                   GCC, and beyond
                 </p>
               </div>
-              <div className="absolute -top-[108px] right-0 ">
+              <div className="lg:absolute lg:-top-[108px] lg:right-0">
                 <img
-                  className="w-[481px] h-[652px] object-contain"
+                  className="hidden h-[652px] w-[481px] object-contain lg:block"
                   src={HishamFull}
                 />
               </div>
             </div>
           </DialogPanel>
         </Dialog>
-        <div className="flex flex-col lg:flex-row gap-10">
-          <div className="bg-white rounded-2xl lg:w-[620px] justify-between lg:h-[326px] flex flex-col ">
-            <div className="pt-8 pl-8 flex flex-col ">
-              <h3 className="text-gray-900 mb-1 text-lg font-semibold  leading-7">
+
+        <div className="flex flex-col gap-5 px-4 pb-16 lg:gap-10 lg:px-0 lg:pb-[100px] xl:flex-row">
+          <div className="flex max-w-[343px] flex-col-reverse justify-between rounded-2xl bg-white lg:h-[326px] lg:w-[620px] lg:max-w-full lg:flex-row">
+            <div className="flex flex-col px-[13px] pt-5 lg:pt-8 lg:pl-8">
+              <h3 className="mb-1 text-lg leading-7 font-semibold text-gray-900">
                 Hessa AlJoker
               </h3>
-              <p className="text-gray-600 mb-6 text-base font-normal  leading-normal">
+              <p className="mb-5 text-base leading-normal font-normal text-gray-600 lg:mb-6">
                 Chairman of YNow Ltd
               </p>
-              <p className="w-[276px] text-gray-900 text-base font-normal  leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-900 lg:w-[276px] lg:text-base lg:leading-normal">
                 Expert in investment, mega-project management, and finance,
                 driving strategic growth at YNow Ltd
               </p>
               <button
                 onClick={() => setFirstModalOpen(true)}
-                className="text-primary-900 font-semibold leading-[20px] text-sm w-fit mt-3 cursor-pointer"
+                className="text-primary-900 mt-3 w-fit cursor-pointer text-base leading-[24px] font-semibold lg:text-sm lg:leading-[20px]"
               >
                 See details
               </button>
-              <span className="mt-auto pl-1.5 pb-[28.45px]">
-                {/* <img src={GrayLogo} /> */}
+              <span className="mt-10 pb-[28.45px] pl-1.5 lg:mt-auto">
                 <GrayLogoIcon />
               </span>
             </div>
 
-            <div className=" py-3 pr-3">
-              <img className=" rounded-lg w-full h-full" src={Hessa} alt="" />
+            <div className="px-[13px] pt-4 lg:py-3 lg:pr-3">
+              <img
+                className="hidden h-full w-full rounded-lg lg:block"
+                src={Hessa}
+                alt=""
+              />
+              <img
+                className="h-[216px] w-[317px] rounded-lg lg:hidden"
+                src={HessaSmall}
+                alt=""
+              />
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl lg:w-[620px] justify-between lg:h-[326px] flex flex-col">
-            <div className="pt-8 pl-8 flex flex-col">
-              <h3 className="text-gray-900 mb-1 text-lg font-semibold  leading-7">
+          <div className="flex max-w-[343px] flex-col-reverse justify-between rounded-2xl bg-white lg:h-[326px] lg:w-[620px] lg:max-w-full lg:flex-row">
+            <div className="flex flex-col px-[13px] pt-5 lg:pt-8 lg:pl-8">
+              <h3 className="mb-1 text-lg leading-7 font-semibold text-gray-900">
                 Hicham N. Karout
               </h3>
-              <p className="text-gray-600 mb-6 text-base font-normal  leading-normal">
+              <p className="mb-5 text-base leading-normal font-normal text-gray-600 lg:mb-6">
                 Managing Director
               </p>
-              <p className="w-[276px] text-gray-900 text-base font-normal  leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-900 lg:w-[276px] lg:text-base lg:leading-normal">
                 A seasoned leader in the food and beverage industry, driving
                 growth, innovation, and market expansion at YNow Ltd
               </p>
               <button
                 onClick={() => setSecondModalOpen(true)}
-                className="text-primary-900 font-semibold leading-[20px] text-sm w-fit mt-3 cursor-pointer"
+                className="text-primary-900 mt-3 w-fit cursor-pointer text-base leading-[24px] font-semibold lg:text-sm lg:leading-[20px]"
               >
                 See details
               </button>
-              <span className="mt-auto pl-1.5 pb-[28.45px]">
+              <span className="mt-10 pb-[28.45px] pl-1.5 lg:mt-auto">
                 <GrayLogoIcon />
               </span>
             </div>
 
-            <div className=" py-3 pr-3 ">
+            <div className="px-[13px] pt-4 lg:py-3 lg:pr-3">
               <img
-                className=" rounded-lg w-full bg-[#8F9896] h-full"
+                className="hidden h-full w-full rounded-lg bg-[#8F9896] lg:block"
                 src={Hisham}
+                alt=""
+              />
+              <img
+                className="h-[216px] w-[317px] rounded-lg bg-[#8F9896] lg:hidden"
+                src={HishamSmall}
                 alt=""
               />
             </div>
@@ -233,24 +268,24 @@ const MeetTheTeam = () => {
 
   const OtherKeyMembers = () => {
     return (
-      <div>
-        <div className="w-[983px] h-[772px] flex-col justify-start items-start inline-flex">
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="px-[16.50px] py-[13px] bg-primary-300 rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold   leading-[30px]">
+      <div className="pb-16 lg:pb-20">
+        <div className="inline-flex max-w-[983px] flex-col items-start justify-start px-4 lg:h-[772px] lg:px-0">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 lg:flex-row lg:gap-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-3 pr-[14px] pl-[15px] lg:px-[16.5px] lg:py-[13px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 LJ
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b  border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold   leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-3 border-b border-gray-300 pb-6 lg:gap-4 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   Lars Jensen
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal   leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Head of Expansion Strategy
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal   leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 Lars brings 15 years of experience in business development and
                 franchise expansion across Europe and Asia. His expertise lies
                 in identifying growth opportunities, negotiating strategic
@@ -259,22 +294,22 @@ const MeetTheTeam = () => {
               </p>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="pl-[11.50px] pr-[10.50px] py-[13px] bg-primary-300 rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold   leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-3 pr-[10px] pl-[11px] lg:py-[13px] lg:pr-[10.50px] lg:pl-[11.50px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 MG
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b  border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <p className="  text-gray-900  text-xl font-semibold   leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-3 border-b border-gray-300 pb-6 lg:gap-4 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   Maria Gonzalez
-                </p>
-                <h2 className="  text-gray-600  text-lg font-normal   leading-7">
-                  Director of Mergers & Acquisitions
                 </h2>
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
+                  Director of Mergers & Acquisitions
+                </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal   leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 Maria is a seasoned M&A specialist with over a decade of
                 experience in leading acquisitions, integrations, and corporate
                 restructuring. She has successfully managed multi-million-dollar
@@ -283,22 +318,22 @@ const MeetTheTeam = () => {
               </p>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="px-[13.50px] py-[13px] bg-primary-300 rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold   leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full p-3 lg:px-[13.5px] lg:py-[13px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 AA
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b  border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold   leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 border-b border-gray-300 pb-6 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   Ahmed Ali
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal   leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Chief Financial Officer
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal   leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 With a strong background in corporate finance, Ahmed has over 12
                 years of experience managing financial operations for
                 multinational companies. His expertise includes financial
@@ -307,22 +342,22 @@ const MeetTheTeam = () => {
               </p>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="px-[14.50px] py-[13px] bg-primary-300 rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold   leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-3 pr-[13px] pl-[14px] lg:px-[14.50px] lg:py-[13px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 JC
               </p>
             </div>
-            <div className="grow shrink basis-0 flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold   leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   John Carter
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal   leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Operations & Logistics Manager
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal   leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 John is an operations expert with over 15 years of experience in
                 supply chain management and operational efficiency. He
                 specializes in streamlining processes, reducing costs, and
@@ -337,52 +372,52 @@ const MeetTheTeam = () => {
 
   const TeamAtAGlance = () => {
     return (
-      <div>
-        <div className="w-[983px] h-[1632px] flex-col justify-start items-start inline-flex">
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="pl-[13.50px] pr-[12.50px] py-[13px] bg-primary-300  rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold    leading-[30px]">
+      <div className="pb-16 lg:pb-20">
+        <div className="inline-flex max-w-[983px] flex-col items-start justify-start px-4 lg:h-[1632px] lg:px-0">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-[13px] pr-[12.50px] pl-[13.50px]">
+              <p className="text-center text-xl leading-[30px] font-semibold text-gray-900">
                 HA
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold    leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 border-b border-gray-300 pb-6 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   Hessa AlJoker
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal    leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Chairwoman of YNow Ltd
                 </h3>
               </div>
-              <div className="  h-[264px] flex-col justify-start items-start gap-5 flex">
-                <p className="  text-gray-600  text-base font-normal    leading-normal">
+              <div className="flex flex-col items-start justify-start gap-5 lg:h-[264px]">
+                <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                   Hessa AlJoker serves as Chairman of YNow Ltd. and is a board
                   member of Contra Investment Group. With extensive experience
                   in investment, managing mega-complex projects, and finance,
                   Hessa provides strategic oversight and guidance to ensure the
                   company&apos;s success.
                 </p>
-                <div className="  h-[104px] flex-col justify-start items-start gap-2 flex">
-                  <p className="  text-gray-900  text-base font-semibold    leading-normal">
+                <div className="flex flex-col items-start justify-start gap-2 lg:h-[104px]">
+                  <p className="text-sm leading-[20px] font-semibold text-gray-900 lg:text-base lg:leading-normal">
                     Hessa&apos;s leadership is marked by:
                   </p>
 
-                  <ul className="list-disc pl-5.5">
-                    <li className="text-gray-900  text-base font-normal    leading-normal">
+                  <ul className="list-disc pl-5.5 text-sm leading-[20px] font-normal text-gray-900 lg:text-base lg:leading-normal">
+                    <li>
                       Expertise in navigating complex investment landscapes and
                       driving financial growth.
                     </li>
-                    <li className="text-gray-900  text-base font-normal    leading-normal">
+                    <li className="">
                       Managing large-scale, multi-sector projects with precision
                       and efficiency.
                     </li>
-                    <li className="text-gray-900  text-base font-normal    leading-normal">
+                    <li>
                       Building strong partnerships and fostering collaboration
                       across diverse stakeholders.
                     </li>
                   </ul>
                 </div>
-                <p className="  text-gray-600  text-base font-normal    leading-normal">
+                <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                   Her vision, combined with her deep understanding of global
                   markets, positions YNow Ltd. for sustained growth and
                   long-term impact.
@@ -390,23 +425,23 @@ const MeetTheTeam = () => {
               </div>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="pl-[13.50px] pr-[12.50px] py-[13px] bg-primary-300  rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold    leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-[13px] pr-[12.50px] pl-[13.50px]">
+              <p className="text-center text-xl leading-[30px] font-semibold text-gray-900">
                 HN
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold    leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 border-b border-gray-300 pb-6 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-xl leading-[30px] font-semibold text-gray-900">
                   Hicham N. Karout
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal    leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Managing Director of YNow Ltd
                 </h3>
               </div>
-              <div className="  h-[328px] flex-col justify-start items-start gap-5 flex">
-                <p className="  text-gray-600  text-base font-normal    leading-normal">
+              <div className="flex flex-col items-start justify-start gap-5 lg:h-[328px]">
+                <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                   Hicham N. Karout brings over 20 years of extensive experience
                   in the Food and Beverage industry across Europe and the Middle
                   East. As Managing Director of YNow Ltd., Hisham combines deep
@@ -416,26 +451,26 @@ const MeetTheTeam = () => {
                   opportunities, spearheading business expansion, and fostering
                   innovative strategies that align with market demands.
                 </p>
-                <div className="  h-[104px] flex-col justify-start items-start gap-2 flex">
-                  <p className="  text-gray-900  text-base font-semibold leading-normal">
+                <div className="flex flex-col items-start justify-start gap-2 lg:h-[104px]">
+                  <p className="text-base leading-normal font-semibold text-gray-900">
                     His expertise includes:
                   </p>
-                  <ul className="list-disc pl-5.5">
-                    <li className="text-gray-900  text-base font-normal leading-normal">
+                  <ul className="list-disc pl-5.5 text-sm leading-[20px] font-normal text-gray-900 lg:text-base lg:leading-normal">
+                    <li>
                       Developing and scaling franchise operations across diverse
                       markets.
                     </li>
-                    <li className="text-gray-900  text-base font-normal leading-normal">
+                    <li>
                       Leading high-performing teams to deliver operational
                       efficiency and customer satisfaction.
                     </li>
-                    <li className="text-gray-900  text-base font-normal leading-normal">
+                    <li>
                       Identifying emerging trends and creating forward-thinking
                       solutions that keep YNow Ltd. ahead of the competition.
                     </li>
                   </ul>
                 </div>
-                <p className="  text-gray-600  text-base font-normal    leading-normal">
+                <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                   With his vision and expertise, Hisham is instrumental in
                   ensuring YNow Ltd. establishes a strong foothold in the UK,
                   GCC, and beyond
@@ -443,22 +478,22 @@ const MeetTheTeam = () => {
               </div>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="px-[16.50px] py-[13px] bg-primary-300  rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold    leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-3 pr-[14px] pl-[15px] lg:px-[16.5px] lg:py-[13px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 LJ
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold    leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-3 border-b border-gray-300 pb-6 lg:gap-4 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   Lars Jensen
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal    leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Head of Expansion Strategy
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal    leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 Lars brings 15 years of experience in business development and
                 franchise expansion across Europe and Asia. His expertise lies
                 in identifying growth opportunities, negotiating strategic
@@ -467,22 +502,22 @@ const MeetTheTeam = () => {
               </p>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="pl-[11.50px] pr-[10.50px] py-[13px] bg-primary-300  rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold    leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-3 pr-[10px] pl-[11px] lg:py-[13px] lg:pr-[10.50px] lg:pl-[11.50px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 MG
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold    leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-3 border-b border-gray-300 pb-6 lg:gap-4 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   Maria Gonzalez
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal    leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Director of Mergers & Acquisitions
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal    leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 Maria is a seasoned M&A specialist with over a decade of
                 experience in leading acquisitions, integrations, and corporate
                 restructuring. She has successfully managed multi-million-dollar
@@ -491,22 +526,22 @@ const MeetTheTeam = () => {
               </p>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="px-[13.50px] py-[13px] bg-primary-300  rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold    leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full p-3 lg:px-[13.5px] lg:py-[13px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 AA
               </p>
             </div>
-            <div className="grow shrink basis-0 pb-7 border-b border-gray-300  flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold    leading-[30px]">
-                  Ahmed Ali{" "}
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 border-b border-gray-300 pb-6 lg:pb-7">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
+                  Ahmed Ali
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal    leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Chief Financial Officer
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal    leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 With a strong background in corporate finance, Ahmed has over 12
                 years of experience managing financial operations for
                 multinational companies. His expertise includes financial
@@ -515,22 +550,22 @@ const MeetTheTeam = () => {
               </p>
             </div>
           </div>
-          <div className="  pt-7 justify-start items-start gap-7 inline-flex">
-            <div className="px-[14.50px] py-[13px] bg-primary-300  rounded-full justify-center items-center flex overflow-hidden">
-              <p className="text-center text-gray-900  text-xl font-semibold    leading-[30px]">
+          <div className="inline-flex flex-col items-start justify-start gap-y-4 pt-6 lg:flex-row lg:gap-7 lg:pt-7">
+            <div className="bg-primary-300 flex items-center justify-center overflow-hidden rounded-full py-3 pr-[13px] pl-[14px] lg:px-[14.50px] lg:py-[13px]">
+              <p className="text-center text-base leading-[24px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                 JC
               </p>
             </div>
-            <div className="grow shrink basis-0 flex-col justify-start items-start gap-4 inline-flex">
-              <div className="flex-col justify-start items-start gap-1 flex">
-                <h2 className="  text-gray-900  text-xl font-semibold    leading-[30px]">
+            <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4">
+              <div className="flex flex-col items-start justify-start gap-1">
+                <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-xl lg:leading-[30px]">
                   John Carter
                 </h2>
-                <h3 className="  text-gray-600  text-lg font-normal    leading-7">
+                <h3 className="text-sm leading-[20px] font-normal text-gray-600 lg:text-lg lg:leading-7">
                   Operations & Logistics Manager
                 </h3>
               </div>
-              <p className="  text-gray-600  text-base font-normal    leading-normal">
+              <p className="text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 John is an operations expert with over 15 years of experience in
                 supply chain management and operational efficiency. He
                 specializes in streamlining processes, reducing costs, and
@@ -545,15 +580,15 @@ const MeetTheTeam = () => {
 
   return (
     <>
-      <div className="bg-[#f2f2f2] w-full flex justify-center">
-        <div className="  max-w-[1280px] px-20 py-[100px] bg-[#f2f2f2] flex-col justify-start items-center inline-flex">
-          <div className="mb-10 lg:h-[124px] flex-col justify-center items-center gap-5 flex">
-            <h2 className="text-center text-3xl leading-[38px] lg:leading-[44px] lg:text-4xl font-semibold ">
-              <span className="text-gray-900  ">Meet the </span>
-              <span className="text-primary-900  ">People</span>
-              <span className="text-gray-900  "> Driving Our Success</span>
+      <section className="flex w-full justify-center bg-[#f2f2f2] lg:px-20 lg:pt-[100px]">
+        <div className="inline-flex min-w-screen flex-col items-center justify-start bg-[#f2f2f2] px-4 pt-16 lg:max-w-[1280px]">
+          <div className="mb-8 flex flex-col items-center justify-center gap-3 lg:mb-10 lg:h-[124px] lg:gap-5">
+            <h2 className="text-center text-3xl leading-[38px] font-semibold lg:text-4xl lg:leading-[44px]">
+              <span className="text-gray-900">Meet the </span>
+              <span className="text-primary-900">People</span>
+              <span className="text-gray-900"> Driving Our Success</span>
             </h2>
-            <h3 className="max-w-[890px] text-center text-gray-600 text-xl font-normal leading-[30px]">
+            <h3 className="max-w-[890px] text-center text-sm leading-[20px] font-normal text-gray-600 lg:text-xl lg:leading-[30px]">
               YNow Ltd.&apos;s management team drives our vision to redefine the
               food and beverage industry with unmatched expertise, innovation,
               and strategic insight
@@ -563,35 +598,43 @@ const MeetTheTeam = () => {
           <TabGroup
             selectedIndex={selectedIndex}
             onChange={setSelectedIndex}
-            className="flex flex-col items-center gap-[60px]"
+            className="flex w-screen flex-col items-center gap-10 lg:w-full lg:gap-[60px]"
           >
-            <TabList className="bg-green-500 overflow-x-scroll justify-start items-center gap-4 inline-flex">
-              {[
-                "Meet Our Leadership Team",
-                "Other Key Team Members",
-                "Our Team at a Glance",
-              ].map((tab, index) => (
-                <Tab
-                  key={index}
-                  className={({ selected }) =>
-                    `px-7 py-3.5  rounded-[500px] outline-none h-14 justify-center items-center gap-2.5 flex transition-colors duration-400 ${
-                      selected
-                        ? "bg-primary-900 text-white"
-                        : "border-primary-900 border text-primary-900"
-                    }`
-                  }
-                >
-                  <span className="text-center  text-lg font-semibold leading-7">
-                    {tab}
-                  </span>
-                </Tab>
-              ))}
-            </TabList>
+            {/* Scrollable Wrapper */}
+            <div className="scrollbar-hide w-full overflow-x-scroll pl-4">
+              <TabList className="flex max-w-full flex-nowrap items-center gap-4 whitespace-nowrap md:justify-center">
+                {[
+                  "Meet Our Leadership Team",
+                  "Other Key Team Members",
+                  "Our Team at a Glance",
+                ].map((tab, index) => (
+                  <Tab
+                    key={index}
+                    className={({ selected }) =>
+                      `flex h-14 w-fit items-center justify-center gap-2.5 rounded-[500px] px-7 py-4 transition-colors duration-400 outline-none lg:py-3.5 ${
+                        selected
+                          ? "bg-primary-900 text-white"
+                          : "border-primary-900 text-primary-900 border"
+                      }`
+                    }
+                  >
+                    <span className="text-center text-base leading-7 font-semibold lg:text-lg">
+                      {tab}
+                    </span>
+                  </Tab>
+                ))}
+                {/* Spacer element to add right padding */}
+                <div className="-ml-2">
+                  <span className="invisible">x</span>
+                </div>
+              </TabList>
+            </div>
+
             <TabPanels>
               {[
-                <LeaderShipTeam key={"first-tab"} />,
-                <OtherKeyMembers key={"second-tab"} />,
-                <TeamAtAGlance key={"third-tab"} />,
+                <LeaderShipTeam key="first-tab" />,
+                <OtherKeyMembers key="second-tab" />,
+                <TeamAtAGlance key="third-tab" />,
               ].map((content, index) => (
                 <Transition
                   key={index}
@@ -609,9 +652,10 @@ const MeetTheTeam = () => {
               ))}
             </TabPanels>
           </TabGroup>
+
           {/* Leads */}
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -41,3 +41,4 @@ export { default as ArrowUp } from "./ArrowUp";
 export { default as BulletPoint } from "./BulletPoint";
 export { default as ArrowRightDouble } from "./ArrowRightDouble";
 export { default as Hamburger } from "./Hamburger";
+export { default as SmallLargeGrayIcon } from "./SmallLargeGrayIcon";

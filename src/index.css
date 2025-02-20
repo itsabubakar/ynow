@@ -70,11 +70,11 @@ body {
   font-family: "Inter";
 }
 
-/* Target only the hero video */
-.hero-video::-webkit-media-controls-play-button {
-  display: none !important;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 
-.hero-video::-webkit-media-controls-start-playback-button {
-  display: none !important;
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

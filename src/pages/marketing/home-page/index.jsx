@@ -34,9 +34,6 @@ function HomePage() {
       const scrollPercentage =
         (scrollTop / (scrollHeight - clientHeight)) * 100;
 
-      console.log(scrollPercentage);
-
-      // Show button when user scrolls past 40% of page height
       setIsVisible(scrollPercentage > 40);
     };
 
@@ -217,7 +214,7 @@ function HomePage() {
 
         {/* What we do */}
 
-        <div className="max-w-[1440px] h-[900px] px-20 pt-[100px] pb-20 flex-col justify-start items-end gap-5 inline-flex">
+        {/* <div className="max-w-[1440px] h-[900px] px-20 pt-[100px] pb-20 flex-col justify-start items-end gap-5 inline-flex">
           <div className="self-stretch justify-end items-center gap-5 inline-flex">
             <div className="grow shrink basis-0 flex-col justify-center items-start gap-4 inline-flex">
               <h2 className=" text-gray-600 text-base font-medium  uppercase leading-normal tracking-wider">
@@ -356,11 +353,11 @@ function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Our business */}
 
-        <div className="w-[1440px] h-[1178px] p-20 flex-col justify-start items-center gap-10 inline-flex">
+        {/* <div className="w-[1440px] h-[1178px] p-20 flex-col justify-start items-center gap-10 inline-flex">
           <div className="self-stretch h-[914px] flex-col justify-start items-center gap-[60px] flex">
             <div className="flex-col justify-start items-center gap-10 flex">
               <div className="flex-col justify-start items-center gap-4 flex">
@@ -470,10 +467,10 @@ function HomePage() {
               <ArrowRight />
             </button>
           </div>
-        </div>
+        </div> */}
 
         {/* Get in touch */}
-        <GetInTouch />
+        {/* <GetInTouch /> */}
       </div>
       <button
         onClick={scrollToTop}
