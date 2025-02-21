@@ -1,71 +1,77 @@
-import { RedLogoBig } from "@/assets/icons";
+import { ChevronDown, RedLogoBig, YnowRedLogoSmall } from "@/assets/icons";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="flex px-20 py-[120px] bg-white justify-start items-start gap-8 ">
-      <div className="w-[1440px] flex mx-auto ">
-        <div className="w-[624px] flex-col justify-start items-start gap-6 inline-flex">
+    <footer className="flex items-start justify-start gap-8 bg-white px-4 py-16 lg:px-20 lg:py-[120px]">
+      {/* Desktop footer nav */}
+      <div className="mx-auto hidden w-[1440px] lg:flex">
+        <div className="inline-flex w-[624px] flex-col items-start justify-start gap-6">
           <Link to="/">
             <RedLogoBig />
           </Link>
-          <div className="w-[368px] text-gray-900 text-lg font-normal  leading-7">
+          <div className="w-[368px] text-lg leading-7 font-normal text-gray-900">
             YNow Ltd., a UK-based startup, specializes in the Food & Beverage
             sector.
           </div>
         </div>
-        <div className="h-[102px] justify-start items-start gap-[52px] flex">
-          <div className="justify-start items-start gap-[72px] flex">
-            <div className="w-[120px] flex-col justify-start items-start gap-4 inline-flex">
-              <div className="self-stretch  justify-start items-start gap-2 inline-flex">
-                <div className="text-gray-900 text-xl font-semibold  leading-[30px]">
+        <div className="flex h-[102px] items-start justify-start gap-[52px]">
+          <div className="flex items-start justify-start gap-[72px]">
+            <div className="inline-flex w-[120px] flex-col items-start justify-start gap-4">
+              <div className="inline-flex items-start justify-start gap-2 self-stretch">
+                <div className="text-xl leading-[30px] font-semibold text-gray-900">
                   About
                 </div>
               </div>
-              <div className="self-stretch h-14 flex-col justify-start items-start gap-2 flex">
+              <div className="flex h-14 flex-col items-start justify-start gap-2 self-stretch">
                 <Link
                   to={"/about-us"}
-                  className="self-stretch text-gray-900 text-sm font-normal  leading-normal"
+                  className="self-stretch text-sm leading-normal font-normal text-gray-900"
                 >
                   About Us
                 </Link>
                 <Link
                   to={"/what-we-do"}
-                  className="text-gray-900 text-sm font-normal  leading-normal"
+                  className="text-sm leading-normal font-normal text-gray-900"
                 >
                   What we do
                 </Link>
               </div>
             </div>
-            <div className="w-[120px] flex-col justify-start items-start gap-4 inline-flex">
-              <div className=" justify-start items-start gap-2 inline-flex">
-                <div className="text-gray-900 text-xl font-semibold  leading-[30px]">
+            <div className="inline-flex w-[120px] flex-col items-start justify-start gap-4">
+              <div className="inline-flex items-start justify-start gap-2">
+                <div className="text-xl leading-[30px] font-semibold text-gray-900">
                   Contact
                 </div>
               </div>
-              <div className="self-stretch h-14 flex-col justify-start items-start gap-2 flex">
+              <div className="flex h-14 flex-col items-start justify-start gap-2 self-stretch">
                 <Link
                   to="/contact-us"
-                  className="text-gray-900 text-sm font-normal  leading-normal"
+                  className="text-sm leading-normal font-normal text-gray-900"
                 >
                   Contact Us
                 </Link>
-                <div className="text-gray-900 text-sm font-normal  leading-normal">
+                <div className="text-sm leading-normal font-normal text-gray-900">
                   Enquiries
                 </div>
               </div>
             </div>
           </div>
-          <div className="w-[253px] flex-col justify-start items-start gap-6 inline-flex">
-            <div className="self-stretch text-gray-900 text-xl font-semibold  leading-[30px]">
+          <div className="inline-flex w-[253px] flex-col items-start justify-start gap-6">
+            <div className="self-stretch text-xl leading-[30px] font-semibold text-gray-900">
               Find us on
             </div>
-            <div className="justify-start items-center gap-4 inline-flex">
-              <div className="w-[47.54px] h-[47.54px] relative">
-                <div className="w-[47.54px] h-[47.54px] left-0 top-0 absolute bg-primary-900 rounded-full" />
+            <div className="inline-flex items-center justify-start gap-4">
+              <div className="relative h-[47.54px] w-[47.54px]">
+                <div className="bg-primary-900 absolute top-0 left-0 h-[47.54px] w-[47.54px] rounded-full" />
                 <div
                   data-svg-wrapper
-                  className="left-[12px] top-[12px] absolute"
+                  className="absolute top-[12px] left-[12px]"
                 >
                   <svg
                     width="24"
@@ -87,11 +93,11 @@ const Footer = () => {
                   </svg>
                 </div>
               </div>
-              <div className="w-[47.54px] h-[47.54px] relative">
-                <div className="w-[47.54px] h-[47.54px] left-0 top-0 absolute bg-primary-900 rounded-full" />
+              <div className="relative h-[47.54px] w-[47.54px]">
+                <div className="bg-primary-900 absolute top-0 left-0 h-[47.54px] w-[47.54px] rounded-full" />
                 <div
                   data-svg-wrapper
-                  className="left-[11.46px] top-[12px] absolute"
+                  className="absolute top-[12px] left-[11.46px]"
                 >
                   <svg
                     width="24"
@@ -121,11 +127,11 @@ const Footer = () => {
                   </svg>
                 </div>
               </div>
-              <div className="w-[47.54px] h-[47.54px] relative">
-                <div className="w-[47.54px] h-[47.54px] left-0 top-0 absolute bg-primary-900 rounded-full" />
+              <div className="relative h-[47.54px] w-[47.54px]">
+                <div className="bg-primary-900 absolute top-0 left-0 h-[47.54px] w-[47.54px] rounded-full" />
                 <div
                   data-svg-wrapper
-                  className="left-[11.92px] top-[12px] absolute"
+                  className="absolute top-[12px] left-[11.92px]"
                 >
                   <svg
                     width="24"
@@ -154,11 +160,11 @@ const Footer = () => {
                   </svg>
                 </div>
               </div>
-              <div className="w-[47.54px] h-[47.54px] relative">
-                <div className="w-[47.54px] h-[47.54px] left-0 top-0 absolute bg-primary-900 rounded-full" />
+              <div className="relative h-[47.54px] w-[47.54px]">
+                <div className="bg-primary-900 absolute top-0 left-0 h-[47.54px] w-[47.54px] rounded-full" />
                 <div
                   data-svg-wrapper
-                  className="left-[12px] top-[12px] absolute"
+                  className="absolute top-[12px] left-[12px]"
                 >
                   <svg
                     width="25"
@@ -185,6 +191,45 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      {/* Mobile footer nav */}
+      <div className="w-full lg:hidden">
+        <div className="mb-10 flex flex-col gap-3">
+          <YnowRedLogoSmall />
+          <p className="text-sm leading-tight font-normal text-gray-900">
+            YNow Ltd., a UK-based startup, specializes in the Food & Beverage
+            sector.
+          </p>
+        </div>
+
+        <Disclosure as="div" className="group w-full">
+          <DisclosureButton className="flex w-full justify-between border-y border-gray-300 py-4 text-start text-gray-900">
+            About{" "}
+            <ChevronDown className="ml-1 transition-transform duration-200 group-data-[open]:rotate-180" />
+          </DisclosureButton>
+          <div className="overflow-hidden">
+            <DisclosurePanel
+              transition
+              className="origin-top border-b border-b-gray-300 py-2 pl-2 text-sm text-gray-600 transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0"
+            >
+              About Us
+            </DisclosurePanel>
+          </div>
+        </Disclosure>
+        <Disclosure as="div" className="group w-full">
+          <DisclosureButton className="flex w-full justify-between border-b border-gray-300 py-4 text-start text-gray-900">
+            Contact
+            <ChevronDown className="ml-1 transition-transform duration-200 group-data-[open]:rotate-180" />
+          </DisclosureButton>
+          <div className="overflow-hidden">
+            <DisclosurePanel
+              transition
+              className="origin-top py-2 pl-2 text-sm text-gray-600 transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0"
+            >
+              Contact Us
+            </DisclosurePanel>
+          </div>
+        </Disclosure>
       </div>
     </footer>
   );

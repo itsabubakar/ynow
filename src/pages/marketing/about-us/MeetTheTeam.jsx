@@ -367,20 +367,20 @@ const MeetTheTeam = () => {
                   company&apos;s success.
                 </p>
                 <div className="flex h-[104px] flex-col items-start justify-start gap-2">
-                  <p className="text-base leading-normal font-semibold text-gray-900">
+                  <p className="text-base leading-normal font-semibold text-gray-600">
                     Hessa&apos;s leadership is marked by:
                   </p>
 
                   <ul className="list-disc pl-5.5">
-                    <li className="text-base leading-normal font-normal text-gray-900">
+                    <li className="text-base leading-normal font-normal text-gray-600">
                       Expertise in navigating complex investment landscapes and
                       driving financial growth.
                     </li>
-                    <li className="text-base leading-normal font-normal text-gray-900">
+                    <li className="text-base leading-normal font-normal text-gray-600">
                       Managing large-scale, multi-sector projects with precision
                       and efficiency.
                     </li>
-                    <li className="text-base leading-normal font-normal text-gray-900">
+                    <li className="text-base leading-normal font-normal text-gray-600">
                       Building strong partnerships and fostering collaboration
                       across diverse stakeholders.
                     </li>
@@ -421,19 +421,19 @@ const MeetTheTeam = () => {
                   innovative strategies that align with market demands.
                 </p>
                 <div className="flex h-[104px] flex-col items-start justify-start gap-2">
-                  <p className="text-base leading-normal font-semibold text-gray-900">
+                  <p className="text-base leading-normal font-semibold text-gray-600">
                     His expertise includes:
                   </p>
                   <ul className="list-disc pl-5.5">
-                    <li className="text-base leading-normal font-normal text-gray-900">
+                    <li className="text-base leading-normal font-normal text-gray-600">
                       Developing and scaling franchise operations across diverse
                       markets.
                     </li>
-                    <li className="text-base leading-normal font-normal text-gray-900">
+                    <li className="text-base leading-normal font-normal text-gray-600">
                       Leading high-performing teams to deliver operational
                       efficiency and customer satisfaction.
                     </li>
-                    <li className="text-base leading-normal font-normal text-gray-900">
+                    <li className="text-base leading-normal font-normal text-gray-600">
                       Identifying emerging trends and creating forward-thinking
                       solutions that keep YNow Ltd. ahead of the competition.
                     </li>

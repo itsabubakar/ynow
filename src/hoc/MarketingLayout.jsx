@@ -5,7 +5,7 @@ const MarketingLayout = ({ children }) => {
     <>
       <Navbar />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

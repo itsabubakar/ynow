@@ -1,4 +1,4 @@
-const ChevronDown = ({ className }) => {
+const ChevronDown = ({ className, color }) => {
   return (
     <svg
       className={className}
@@ -10,7 +10,7 @@ const ChevronDown = ({ className }) => {
     >
       <path
         d="M6.49976 9.00005L12.4998 15L18.4998 9"
-        stroke="#101828"
+        stroke={color || "#101828"}
         strokeWidth="1.5"
         strokeMiterlimit="16"
       />

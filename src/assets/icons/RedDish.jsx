@@ -1,4 +1,4 @@
-const RedDish = () => {
+export const RedDish = () => {
   return (
     <svg
       width="40"
@@ -29,4 +29,33 @@ const RedDish = () => {
   );
 };
 
-export default RedDish;
+export const RedDishSmall = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.33203 18.666H29.332"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="square"
+      />
+      <path
+        d="M6.66797 29.3327L9.33464 26.666L17.8426 26.1343C19.227 26.0478 20.5232 25.4252 21.4562 24.399L26.668 18.666H22.0013L19.449 21.2183C18.9489 21.7184 18.2706 21.9994 17.5634 21.9994H17.3346M17.3346 21.9994V21.3327C17.3346 19.8599 16.1408 18.666 14.668 18.666H11.5438C10.1293 18.666 8.77273 19.2279 7.77254 20.2282L2.66797 25.3327M17.3346 21.9994H12.668"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="square"
+      />
+      <path
+        d="M6.66797 15.3327C6.66797 9.44163 11.4436 4.66602 17.3346 4.66602M17.3346 4.66602C23.2257 4.66602 28.0013 9.44163 28.0013 15.3327M17.3346 4.66602V2.66602"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="square"
+      />
+    </svg>
+  );
+};

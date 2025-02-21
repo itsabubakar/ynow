@@ -1,1 +1,1 @@
-export { default as HeroVideo } from "./hero-vid.mp4";
+export { default as HeroVideo } from "./hero-vid.webm";

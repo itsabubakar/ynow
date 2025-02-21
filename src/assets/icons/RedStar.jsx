@@ -1,4 +1,4 @@
-const RedStar = () => {
+export const RedStar = () => {
   return (
     <svg
       width="40"
@@ -17,4 +17,21 @@ const RedStar = () => {
   );
 };
 
-export default RedStar;
+export const RedStarSmall = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M19.3756 12.184L15.9987 3.33398L12.6218 12.184L3.33203 12.6383L10.3691 18.8154L7.79728 28.6673L15.9987 23.0377L24.2002 28.6673L21.6283 18.8154L28.6654 12.6383L19.3756 12.184Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

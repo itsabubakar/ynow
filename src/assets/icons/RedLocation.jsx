@@ -1,4 +1,4 @@
-const Location = () => {
+export const Location = () => {
   return (
     <svg
       width="40"
@@ -21,4 +21,25 @@ const Location = () => {
   );
 };
 
-export default Location;
+export const LocationSmall = () => {
+  return (
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20.6654 14.6667C20.6654 17.244 18.576 19.3333 15.9987 19.3333C13.4214 19.3333 11.332 17.244 11.332 14.6667C11.332 12.0893 13.4214 10 15.9987 10C18.576 10 20.6654 12.0893 20.6654 14.6667Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+      />
+      <path
+        d="M28 14.666C28 23.9994 16 29.3327 16 29.3327C16 29.3327 4 23.9994 4 14.666C4 8.0386 9.37259 2.66602 16 2.66602C22.6275 2.66602 28 8.0386 28 14.666Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+      />
+    </svg>
+  );
+};

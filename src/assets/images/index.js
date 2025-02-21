@@ -8,3 +8,4 @@ export { default as HishamFull } from "./hisham-full.png";
 export { default as HishamSmall } from "./hisham-small.png";
 export { default as HessaSmall } from "./hessa-small.png";
 export { default as HishamMedium } from "./hisham-medium.png";
+export { default as HessaMedium } from "./hessa-medium.png";
