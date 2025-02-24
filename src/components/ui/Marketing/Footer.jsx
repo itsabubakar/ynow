@@ -10,12 +10,12 @@ const Footer = () => {
   return (
     <footer className="flex items-start justify-start gap-8 bg-white px-4 py-16 lg:px-20 lg:py-[120px]">
       {/* Desktop footer nav */}
-      <div className="mx-auto hidden w-[1440px] lg:flex">
-        <div className="inline-flex w-[624px] flex-col items-start justify-start gap-6">
+      <div className="mx-auto hidden w-[1440px] gap-10 xl:flex">
+        <div className="inline-flex flex-col items-start justify-start gap-6 xl:w-[624px]">
           <Link to="/">
             <RedLogoBig />
           </Link>
-          <div className="w-[368px] text-lg leading-7 font-normal text-gray-900">
+          <div className="text-lg leading-7 font-normal text-gray-900 lg:w-[368px]">
             YNow Ltd., a UK-based startup, specializes in the Food & Beverage
             sector.
           </div>
@@ -193,7 +193,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Mobile footer nav */}
-      <div className="w-full lg:hidden">
+      <div className="w-full xl:hidden">
         <div className="mb-10 flex flex-col gap-3">
           <YnowRedLogoSmall />
           <p className="text-sm leading-tight font-normal text-gray-900">

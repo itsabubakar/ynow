@@ -16,7 +16,7 @@ const GetInTouch = () => {
               {description}
             </div>
           </div>
-          <Link className="self-stretch pt-14 text-sm leading-normal font-bold text-[#c91235] underline lg:pt-0">
+          <Link className="text-primary-900 self-stretch pt-14 text-sm leading-normal font-bold underline lg:pt-0">
             {link}
           </Link>
         </div>

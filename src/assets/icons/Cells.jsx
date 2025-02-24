@@ -1,4 +1,4 @@
-const Cells = () => {
+export const Cells = () => {
   return (
     <svg
       width="56"
@@ -29,4 +29,33 @@ const Cells = () => {
   );
 };
 
-export default Cells;
+export const CellsSmall = () => {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M32.5007 27.5L35.834 20.8334L32.5007 14.167H24.1673L20.834 20.8334L24.1673 27.5H32.5007Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15.8327 17.5001L19.166 10.8334L15.8327 4.16699H7.49935L4.16602 10.8334L7.49935 17.5001H15.8327Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M15.8327 35.833L19.166 29.1663L15.8327 22.5H7.49935L4.16602 29.1663L7.49935 35.833H15.8327Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};

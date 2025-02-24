@@ -1,4 +1,4 @@
-const Leaf = () => {
+export const Leaf = () => {
   return (
     <svg
       width="56"
@@ -24,4 +24,28 @@ const Leaf = () => {
   );
 };
 
-export default Leaf;
+export const LeafSmall = () => {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.1251 28.8747C6.29165 24.0412 6.29165 16.2046 11.1251 11.3712C17.6888 4.80743 34.0983 5.90138 34.0983 5.90138C34.0983 5.90138 35.1923 22.3108 28.6285 28.8747C25.3878 32.1153 20.7972 33.1832 16.6667 32.0783"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.83398 34.167L25.834 14.167"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};

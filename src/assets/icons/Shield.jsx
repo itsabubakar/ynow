@@ -1,4 +1,4 @@
-const Shield = () => {
+export const Shield = () => {
   return (
     <svg
       width="56"
@@ -24,4 +24,28 @@ const Shield = () => {
   );
 };
 
-export default Shield;
+export const ShieldSmall = () => {
+  return (
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14.166 19.1663L18.3327 23.333L26.666 13.333"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M35 18.4182V10.2051C35 8.91342 34.0242 7.84137 32.7585 7.62137C27.6583 6.73481 23.4243 4.76254 21.3587 3.66891C20.5128 3.22104 19.4872 3.22104 18.6413 3.66891C16.5757 4.76254 12.3417 6.73481 7.24148 7.62137C5.97587 7.84137 5 8.91342 5 10.2051V18.4182C5 29.1322 15.896 34.9762 19.1148 36.4688C19.6828 36.7322 20.3172 36.7322 20.8852 36.4688C24.104 34.9762 35 29.1322 35 18.4182Z"
+        stroke="#C91235"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};

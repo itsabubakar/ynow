@@ -3,15 +3,15 @@ import { BgPattern } from "@/assets/images";
 const OurCommitment = () => {
   return (
     <section
-      className="w-full py-[100px] bg-primary-900 flex-col items-center flex"
+      className="bg-primary-900 flex w-full flex-col items-center px-4 py-16 lg:px-0 lg:py-[100px]"
       style={{ backgroundImage: `url(${BgPattern})` }}
     >
-      <div className="w-[982px] flex-col justify-start items-center gap-10 inline-flex">
-        <div className="self-stretch h-[154px] flex-col justify-center items-center gap-5 flex">
-          <div className="self-stretch text-center text-white text-4xl font-semibold  leading-[44px]">
+      <div className="inline-flex flex-col items-center justify-start gap-10 lg:w-[982px]">
+        <div className="flex flex-col items-center justify-center gap-3 self-stretch lg:h-[154px] lg:gap-5">
+          <div className="self-stretch text-center text-3xl leading-[38px] font-semibold text-white lg:text-4xl lg:leading-[44px]">
             Our Commitment
           </div>
-          <div className="self-stretch text-center text-gray-100 text-xl font-normal  leading-[30px]">
+          <div className="self-stretch text-center text-sm leading-[20px] font-normal text-gray-100 lg:text-xl lg:leading-[30px]">
             At YNow Ltd., we go beyond business—we are partners in progress.
             From expanding franchises to managing operations, we create
             impactful opportunities driven by innovation, sustainability, and
@@ -19,8 +19,8 @@ const OurCommitment = () => {
           </div>
         </div>
 
-        <div className="px-7 py-3.5 bg-white rounded-[500px] justify-center items-center gap-2.5 inline-flex">
-          <div className="text-center text-gray-900 text-lg font-semibold  leading-7">
+        <div className="inline-flex items-center justify-center gap-2.5 rounded-[500px] bg-white px-7 py-3.5">
+          <div className="text-center text-lg leading-7 font-semibold text-gray-900">
             Contact Us
           </div>
         </div>
