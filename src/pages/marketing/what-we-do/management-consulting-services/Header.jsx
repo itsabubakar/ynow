@@ -21,8 +21,8 @@ const Header = () => {
         </div>
 
         <div className="space-y-2">
-          <div className="bg-light-gray flex h-[376px] w-[1280px] items-start justify-between rounded-t-[20px] p-10">
-            <div className="inline-flex w-[505px] flex-col items-start justify-center">
+          <div className="bg-light-gray flex flex-col items-start justify-between rounded-t-[20px] px-5 py-7 lg:h-[376px] lg:w-[1280px] lg:flex-row lg:p-10">
+            <div className="inline-flex flex-col items-start justify-center lg:w-[505px]">
               <h2 className="mb-4 text-2xl leading-loose font-semibold text-gray-900">
                 Our Business Model
               </h2>
@@ -37,7 +37,7 @@ const Header = () => {
               </p>
             </div>
 
-            <div className="inline-flex w-[615px] flex-col items-start justify-start gap-5">
+            <div className="inline-flex flex-col items-start justify-start gap-5 lg:w-[615px]">
               <div className="inline-flex w-full items-center justify-start gap-7">
                 <BulletPoint />
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 border-b border-[#cfd4dc] pb-5">
@@ -75,50 +75,50 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="bg-light-gray flex h-[396px] w-[1280px] items-start justify-between rounded-b-[20px] p-10">
-            <div className="inline-flex w-[505px] flex-col items-start justify-center">
+          <div className="bg-light-gray flex flex-col items-start justify-between rounded-b-[20px] p-10 lg:h-[396px] lg:w-[1280px] lg:flex-row">
+            <div className="inline-flex flex-col items-start justify-center lg:w-[505px]">
               <h2 className="mb-4 text-2xl leading-loose font-semibold text-gray-900">
                 Services We Provide
               </h2>
             </div>
 
-            <div className="inline-flex w-[615px] flex-col items-start justify-start gap-y-5">
-              <div className="inline-flex h-[51px] w-full items-center justify-start gap-7">
+            <div className="inline-flex flex-col items-start justify-start gap-y-5 lg:w-[615px]">
+              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
                 <BulletPoint />
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch font-['Inter'] text-lg leading-7 font-semibold text-[#0f1728]">
+                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
                     Day-to-day operational management
                   </div>
                 </div>
               </div>
-              <div className="inline-flex h-[51px] w-full items-center justify-start gap-7">
+              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
                 <BulletPoint />
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch font-['Inter'] text-lg leading-7 font-semibold text-[#0f1728]">
+                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
                     Strategic planning and growth strategies
                   </div>
                 </div>
               </div>
-              <div className="inline-flex h-[51px] w-full items-center justify-start gap-7">
+              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
                 <BulletPoint />
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch font-['Inter'] text-lg leading-7 font-semibold text-[#0f1728]">
+                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
                     Financial oversight and optimization
                   </div>
                 </div>
               </div>
-              <div className="inline-flex h-[51px] w-full items-center justify-start gap-7">
+              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
                 <BulletPoint />
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch font-['Inter'] text-lg leading-7 font-semibold text-[#0f1728]">
+                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
                     Marketing, branding, and customer engagement strategies
                   </div>
                 </div>
               </div>
-              <div className="inline-flex h-[51px] w-full items-center justify-start gap-7">
+              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
                 <BulletPoint />
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch pb-5">
-                  <div className="self-stretch font-['Inter'] text-lg leading-7 font-semibold text-[#0f1728]">
+                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
                     Recruitment and staff training
                   </div>
                 </div>

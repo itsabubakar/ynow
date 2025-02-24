@@ -4,14 +4,14 @@ import { Link } from "react-router";
 const Application = () => {
   return (
     <section
-      className="w-full h-[420px] bg-primary-900 flex-col items-center flex"
+      className="bg-primary-900 flex w-full flex-col items-center lg:h-[420px]"
       style={{ backgroundImage: `url(${BgPattern})` }}
     >
-      <div className="max-w-[1440px] mx-auto py-[100px] flex flex-col items-center">
-        <h3 className="text-center mb-4 text-white text-4xl font-semibold    leading-[44px]">
+      <div className="flex max-w-[1440px] flex-col items-center px-4 py-16 lg:mx-auto lg:py-[100px]">
+        <h3 className="mb-3 text-center text-3xl leading-[38px] font-semibold text-white lg:mb-4 lg:text-4xl lg:leading-[44px]">
           Ready to optimize your business?
         </h3>
-        <p className="text-center max-w-[780px] text-[#f2f3f6] text-xl font-normal    leading-[30px]">
+        <p className="max-w-[780px] text-center text-sm leading-[20px] font-normal text-[#f2f3f6] lg:text-xl lg:leading-[30px]">
           Click here to connect with an expert who will evaluate your
           opportunity and respond. Ensure all information is submitted in
           advance
@@ -19,7 +19,7 @@ const Application = () => {
 
         <Link
           to={"/"}
-          className="h-14 mt-11 px-7 py-3.5 bg-white rounded-[500px] text-center text-[#0f1728] text-lg font-semibold    leading-7 justify-center items-center gap-2.5 inline-flex"
+          className="mt-10 inline-flex h-14 items-center justify-center gap-2.5 rounded-[500px] bg-white px-7 py-3.5 text-center text-lg leading-7 font-semibold text-[#0f1728] lg:mt-11"
         >
           Get started
         </Link>
