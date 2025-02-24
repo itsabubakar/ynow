@@ -114,7 +114,7 @@ const ValuesAndVision = () => {
             </div>
           </div>
           <div className="flex flex-col items-center justify-start gap-5 lg:flex-row">
-            <div className="inline-flex flex-col items-start justify-start gap-7 rounded-3xl border border-gray-300 bg-white px-6 py-7 lg:h-[296px] lg:w-[630px] lg:gap-10 lg:p-10">
+            <div className="inline-flex flex-col items-start justify-start gap-7 rounded-3xl border border-gray-300 bg-white px-6 py-7 lg:h-[296px] lg:gap-10 lg:p-10 xl:w-[630px]">
               <div className="relative hidden lg:block">
                 <Partnership />
               </div>

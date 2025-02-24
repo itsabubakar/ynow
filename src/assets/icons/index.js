@@ -38,7 +38,7 @@ export { default as RedLogoBig } from "./RedLogoBig";
 export { default as GrayLogoIcon } from "./GrayLogo";
 export { default as LargeGrayIcon } from "./LargeGrayLogo";
 export { default as ArrowUp } from "./ArrowUp";
-export { default as BulletPoint } from "./BulletPoint";
+export { BulletPoint, BulletPointSmall } from "./BulletPoint";
 export { default as ArrowRightDouble } from "./ArrowRightDouble";
 export { default as Hamburger } from "./Hamburger";
 export { default as SmallLargeGrayIcon } from "./SmallLargeGrayIcon";

@@ -62,7 +62,7 @@ const Hero = () => {
             <div className="relative mb-10 hidden lg:block">
               <Cells />
             </div>
-            <div className="lg-hidden relative mb-5">
+            <div className="relative mb-5 lg:hidden">
               <CellsSmall />
             </div>
             <div className="flex flex-col items-start justify-center">
