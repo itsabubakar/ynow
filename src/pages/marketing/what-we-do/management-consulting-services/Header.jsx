@@ -1,4 +1,5 @@
-import { BulletPoint } from "@/assets/icons";
+import { BulletPoint, BulletPointSmall } from "@/assets/icons";
+import { Link } from "react-router";
 
 const Header = () => {
   return (
@@ -23,10 +24,10 @@ const Header = () => {
         <div className="space-y-2">
           <div className="bg-light-gray flex flex-col items-start justify-between rounded-t-[20px] px-5 py-7 lg:h-[376px] lg:w-[1280px] lg:flex-row lg:p-10">
             <div className="inline-flex flex-col items-start justify-center lg:w-[505px]">
-              <h2 className="mb-4 text-2xl leading-loose font-semibold text-gray-900">
+              <h2 className="mb-2 text-lg leading-[28px] font-semibold text-gray-900 lg:mb-4 lg:text-2xl lg:leading-loose">
                 Our Business Model
               </h2>
-              <p className="mb-10 text-base leading-normal font-normal text-gray-600">
+              <p className="mb-10 text-sm leading-[20px] font-normal text-gray-600 lg:text-base lg:leading-normal">
                 At YNow Ltd., we are more than just a business; we are a partner
                 in progress. Whether expanding franchise brands, acquiring
                 thriving businesses, or managing operations for others, our
@@ -39,34 +40,49 @@ const Header = () => {
 
             <div className="inline-flex flex-col items-start justify-start gap-5 lg:w-[615px]">
               <div className="inline-flex w-full items-center justify-start gap-7">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 border-b border-[#cfd4dc] pb-5">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 border-b border-[#cfd4dc] pb-4 lg:pb-5">
                   <h3 className="text-sm leading-tight font-normal text-gray-600">
                     Profit-Sharing Model
                   </h3>
-                  <p className="text-lg leading-7 font-semibold text-gray-900">
+                  <p className="text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     We manage your business and share in the profits
                   </p>
                 </div>
               </div>
               <div className="inline-flex w-full items-center justify-start gap-7">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 border-b border-[#cfd4dc] pb-5">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 border-b border-[#cfd4dc] pb-4 lg:pb-5">
                   <h3 className="text-sm leading-tight font-normal text-gray-600">
                     Fixed-Fee Arrangement
                   </h3>
-                  <p className="text-lg leading-7 font-semibold text-gray-900">
+                  <p className="text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Professional management services for a fixed fee
                   </p>
                 </div>
               </div>
               <div className="inline-flex w-full items-center justify-start gap-7">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 pb-5">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 pb-4 lg:pb-5">
                   <h3 className="text-sm leading-tight font-normal text-gray-600">
                     Eligible Businesses
                   </h3>
-                  <p className="text-lg leading-7 font-semibold text-gray-900">
+                  <p className="text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Single-owner or multi-owner brands, including struggling or
                     well-established operations
                   </p>
@@ -75,52 +91,83 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="bg-light-gray flex flex-col items-start justify-between rounded-b-[20px] p-10 lg:h-[396px] lg:w-[1280px] lg:flex-row">
-            <div className="inline-flex flex-col items-start justify-center lg:w-[505px]">
-              <h2 className="mb-4 text-2xl leading-loose font-semibold text-gray-900">
+          <div className="bg-light-gray flex flex-col items-start justify-between rounded-b-[20px] px-5 py-7 lg:h-[396px] lg:w-[1280px] lg:flex-row lg:p-10">
+            <div className="inline-flex w-full flex-col items-start justify-center lg:w-[505px]">
+              <h2 className="text-lg leading-[28px] font-semibold text-gray-900 lg:text-2xl lg:leading-loose">
                 Services We Provide
               </h2>
+              <Link
+                to={"/"}
+                className="bg-primary-900 mt-5 mb-10 flex w-full items-center justify-center gap-2.5 rounded-[500px] px-7 py-3.5 text-center text-lg leading-7 font-semibold text-white lg:mt-10 lg:w-fit"
+              >
+                Apply now
+              </Link>
             </div>
 
             <div className="inline-flex flex-col items-start justify-start gap-y-5 lg:w-[615px]">
-              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
+              <div className="inline-flex w-full items-center justify-start gap-4 lg:h-[51px] lg:gap-7">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-4 lg:pb-5">
+                  <p className="self-stretch text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Day-to-day operational management
-                  </div>
+                  </p>
                 </div>
               </div>
-              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
+              <div className="inline-flex w-full items-center justify-start gap-4 lg:h-[51px] lg:gap-7">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-center gap-2 self-stretch border-b border-[#cfd4dc] pb-4 lg:pb-5">
+                  <p className="self-stretch text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Strategic planning and growth strategies
-                  </div>
+                  </p>
                 </div>
               </div>
-              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
+              <div className="inline-flex w-full items-center justify-start gap-4 lg:h-[51px] lg:gap-7">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-4 lg:pb-5">
+                  <p className="self-stretch text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Financial oversight and optimization
-                  </div>
+                  </p>
                 </div>
               </div>
-              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
-                <BulletPoint />
-                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-5">
-                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
+              <div className="inline-flex w-full items-center justify-start gap-4 lg:h-[51px] lg:gap-7">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
+                <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch border-b border-[#cfd4dc] pb-4 lg:pb-5">
+                  <p className="self-stretch text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Marketing, branding, and customer engagement strategies
-                  </div>
+                  </p>
                 </div>
               </div>
-              <div className="inline-flex w-full items-center justify-start gap-7 lg:h-[51px]">
-                <BulletPoint />
+              <div className="inline-flex w-full items-center justify-start gap-4 lg:h-[51px] lg:gap-7">
+                <span className="hidden lg:block">
+                  <BulletPoint />
+                </span>{" "}
+                <span className="lg:hidden">
+                  <BulletPointSmall />
+                </span>
                 <div className="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-2 self-stretch pb-5">
-                  <div className="self-stretch text-lg leading-7 font-semibold text-gray-900">
+                  <p className="self-stretch text-sm leading-[20px] font-semibold text-gray-900 lg:text-lg lg:leading-7">
                     Recruitment and staff training
-                  </div>
+                  </p>
                 </div>
               </div>
             </div>

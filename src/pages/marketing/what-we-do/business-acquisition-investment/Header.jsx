@@ -20,7 +20,7 @@ const Header = () => {
           </h2>
         </div>
 
-        <div className="bg-light-gray flex flex-col items-start justify-between gap-y-10 rounded-[20px] px-5 py-7 lg:h-[616px] lg:w-[1280px] lg:flex-row lg:p-10">
+        <div className="bg-light-gray flex flex-col items-start justify-between gap-y-10 rounded-[20px] px-5 py-7 lg:h-[672px] lg:w-[1280px] lg:flex-row lg:p-10">
           <div className="inline-flex flex-col items-start justify-center lg:w-[505px]">
             <h2 className="mb-2 text-2xl leading-[28px] font-semibold text-gray-900 lg:mb-4 lg:text-lg lg:leading-loose">
               Investment Criteria

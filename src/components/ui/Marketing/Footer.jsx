@@ -193,7 +193,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Mobile footer nav */}
-      <div className="w-full xl:hidden">
+      <div className="flex w-full flex-col xl:hidden">
         <div className="mb-10 flex flex-col gap-3">
           <YnowRedLogoSmall />
           <p className="text-sm leading-tight font-normal text-gray-900">
@@ -201,7 +201,6 @@ const Footer = () => {
             sector.
           </p>
         </div>
-
         <Disclosure as="div" className="group w-full">
           <DisclosureButton className="flex w-full justify-between border-y border-gray-300 py-4 text-start text-gray-900">
             About{" "}
@@ -230,6 +229,135 @@ const Footer = () => {
             </DisclosurePanel>
           </div>
         </Disclosure>
+        {/* Socials */}
+        <div className="mx-auto inline-flex h-12 items-center justify-center gap-5 pt-10">
+          <div className="relative h-12 w-12">
+            <div className="absolute top-0 left-0 h-12 w-12 rounded-full bg-[#c91235]" />
+            <div
+              data-svg-wrapper
+              className="absolute top-[12.12px] left-[12.12px]"
+            >
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="24.231"
+                  height="24.231"
+                  transform="translate(0.615234 0.115479)"
+                  fill="#C91235"
+                />
+                <path
+                  d="M24.8463 0.115479V24.3465H0.615234V0.115479H24.8463Z"
+                  fill="white"
+                  fillOpacity="0.01"
+                />
+                <path
+                  d="M18.5528 3.14429H21.6357L14.9004 10.8423L22.824 21.3175H16.6199L11.7606 14.9644L6.20056 21.3175H3.11577L10.3198 13.0837L2.71875 3.14429H9.08032L13.4727 8.95134L18.5528 3.14429ZM17.4708 19.4723H19.1791L8.15209 4.89265H6.31892L17.4708 19.4723Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="relative h-12 w-12">
+            <div className="absolute top-0 left-0 h-12 w-12 rounded-full bg-[#c91235]" />
+            <div
+              data-svg-wrapper
+              className="absolute top-[12.12px] left-[11.57px]"
+            >
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="24.231"
+                  height="24.231"
+                  transform="translate(0.0673828 0.115479)"
+                  fill="#C91235"
+                />
+                <path
+                  d="M24.2984 0.115479V24.3465H0.0673828V0.115479H24.2984Z"
+                  fill="white"
+                  fillOpacity="0.01"
+                />
+                <path
+                  d="M16.7257 7.68767H16.7277M15.2113 12.231C15.2113 13.9038 13.8552 15.2599 12.1824 15.2599C10.5096 15.2599 9.15353 13.9038 9.15353 12.231C9.15353 10.5582 10.5096 9.20211 12.1824 9.20211C13.8552 9.20211 15.2113 10.5582 15.2113 12.231ZM12.1824 20.8128V20.8128C14.586 20.8128 15.7879 20.8128 16.7536 20.4734C18.4709 19.8699 19.8213 18.5194 20.4248 16.8022C20.7642 15.8364 20.7642 14.6346 20.7642 12.231V12.231C20.7642 9.82735 20.7642 8.62553 20.4248 7.6598C19.8213 5.94253 18.4709 4.59209 16.7536 3.98857C15.7879 3.64917 14.586 3.64917 12.1824 3.64917V3.64917C9.77877 3.64917 8.57695 3.64917 7.61121 3.98857C5.89395 4.59209 4.5435 5.94253 3.93999 7.6598C3.60059 8.62553 3.60059 9.82735 3.60059 12.231V12.231C3.60059 14.6346 3.60059 15.8364 3.93999 16.8022C4.5435 18.5194 5.89395 19.8699 7.61121 20.4734C8.57695 20.8128 9.77877 20.8128 12.1824 20.8128Z"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="relative h-12 w-12">
+            <div className="absolute top-0 left-0 h-12 w-12 rounded-full bg-[#c91235]" />
+            <div
+              data-svg-wrapper
+              className="absolute top-[12.12px] left-[12.03px]"
+            >
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  width="24.231"
+                  height="24.231"
+                  transform="translate(0.530273 0.115479)"
+                  fill="#C91235"
+                />
+                <path
+                  d="M24.7613 0.115479V24.3465H0.530273V0.115479H24.7613Z"
+                  fill="white"
+                  fillOpacity="0.01"
+                />
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M22.7423 12.231C22.7423 17.3925 18.8687 21.6491 13.8694 22.2544L13.8693 22.2542C13.8696 22.2542 13.8698 22.2542 13.87 22.2542V15.3158H16.5999L17.1653 12.2308H13.8655V11.1399C13.8655 9.50819 14.5038 8.88222 16.1596 8.88222C16.6722 8.88222 17.0884 8.89456 17.3268 8.91868V6.1237C16.8742 5.99862 15.772 5.87354 15.1337 5.87354C11.7615 5.87354 10.2067 7.46482 10.2067 10.9015V12.2308H8.12296V15.3163H10.2067V22.0304H10.2073L10.2073 22.0306C5.80921 20.9396 2.5498 16.9662 2.5498 12.231C2.5498 6.65508 7.07012 2.13477 12.6461 2.13477C18.222 2.13477 22.7423 6.65508 22.7423 12.231Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="relative h-12 w-12">
+            <div className="absolute top-0 left-0 h-12 w-12 rounded-full bg-[#c91235]" />
+            <div
+              data-svg-wrapper
+              className="absolute top-[12.12px] left-[12.12px]"
+            >
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.8463 0.115479V24.3465H0.615234V0.115479H24.8463Z"
+                  fill="white"
+                  fillOpacity="0.01"
+                />
+                <path
+                  d="M18.7884 9.10106C16.485 8.63292 14.7499 6.59489 14.7499 4.15405V16.2696C14.7499 18.5 12.9418 20.3081 10.7114 20.3081C8.48095 20.3081 6.67285 18.5 6.67285 16.2696C6.67285 14.3878 7.95989 12.8066 9.70173 12.3583"
+                  stroke="white"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );
